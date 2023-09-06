@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @media (min-width: 2000px) {
   .container {
     max-width: 75%;
@@ -9,6 +9,27 @@ html, body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
+}
+
+.button {
+  padding: 10px 30px;
+  background-color: #F9D783;
+  border: 1px solid #F9D783;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #191919;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s ease-in-out;
+  text-transform: capitalize;
+  text-align: center;
+}
+.button i {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+.button:hover {
+  transform: scale(0.9);
 }
 
 header {
@@ -206,6 +227,7 @@ header .container .menu .main-menu > a:hover {
   display: flex;
   flex-flow: row wrap;
   padding-top: 2rem;
+  border: 2px solid red;
 }
 @media (max-width: 992px) {
   .hero .container {
@@ -216,16 +238,129 @@ header .container .menu .main-menu > a:hover {
   display: flex;
   flex-flow: row wrap;
   align-content: center;
+  gap: 1rem;
+  border: 2px solid gold;
 }
-.hero .hero-info .button {
-  background-color: red;
+.hero .hero-info h1 {
+  font-size: clamp(3rem, 1.6019rem + 3.8835vw, 5rem);
+  text-transform: capitalize;
+  font-family: "DM Sans", sans-serif;
+}
+.hero .hero-info .button:last-child {
+  background-color: transparent;
+  border-color: #191919;
 }
 .hero .hero-img {
   display: flex;
-  border: 2px solid red;
   justify-content: center;
 }
 .hero .hero-img img {
-  height: 526px;
+  aspect-ratio: 4/3;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.business-logo {
+  padding: 5rem 0;
+}
+.business-logo .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   border: 2px solid red;
+  gap: 20px;
+}
+.business-logo .container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid gold;
+}
+
+.features {
+  padding: 5rem 0;
+}
+.features .container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  outline: 1px solid #dad9d3;
+  outline-offset: 4rem;
+  gap: 40px;
+}
+@media (min-width: 992px) {
+  .features .container {
+    flex-flow: row wrap;
+    gap: 0px;
+  }
+}
+.features .container .features-info {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: start;
+  gap: 20px;
+}
+.features .container .features-info p {
+  color: #F94D1C;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 1.125rem;
+}
+.features .container .features-info h2 {
+  color: #191919;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+.features .container .features-info .button {
+  width: 100%;
+}
+.features .container .features-box {
+  display: flex;
+  flex-flow: row wrap;
+}
+.features .container .features-box div {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+  padding: 1.5rem 1rem;
+}
+.features .container .features-box div h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.375rem;
+  text-transform: capitalize;
+}
+.features .container .features-box div p {
+  color: 500000E5E;
+  font-size: 1;
+}
+.features .container .features-box div img {
+  margin-bottom: 30px;
+}
+
+.about {
+  padding: 5rem 0;
+}
+.about .container {
+  display: flex;
+  justify-content: space-between;
+}
+.about .container .about-img {
+  padding: 0 4rem;
+  position: relative;
+}
+.about .container .about-img div {
+  background-color: red;
+  position: absolute;
+  left: 0;
+  bottom: 3rem;
+}
+.about .container .about-info .button {
+  background-color: #191919;
+  border-color: #191919;
+  color: #ffffff;
+}
+.about .container .about-info .play i {
+  margin-right: 5px;
 }
