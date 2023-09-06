@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@media (min-width: 2000px) {
+  .container {
+    max-width: 75%;
+  }
+}
 html, body {
   color: #191919;
   font-family: "Inter", sans-serif;
@@ -15,11 +20,6 @@ header .container {
   justify-content: space-between;
   align-items: center;
   gap: 4.375rem;
-}
-@media (min-width: 2000px) {
-  header .container {
-    max-width: 75%;
-  }
 }
 header .container .menu {
   display: none;
@@ -194,4 +194,38 @@ header .container .menu .main-menu > a:hover {
 .mobile-menu-slide ul li {
   list-style: none;
   text-align: center;
+}
+
+.hero {
+  background-color: #f0efe9;
+  background-image: url(/images/bg-effect.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+.hero .container {
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 2rem;
+}
+@media (max-width: 992px) {
+  .hero .container {
+    flex-flow: column-reverse wrap;
+  }
+}
+.hero .hero-info {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+}
+.hero .hero-info .button {
+  background-color: red;
+}
+.hero .hero-img {
+  display: flex;
+  border: 2px solid red;
+  justify-content: center;
+}
+.hero .hero-img img {
+  height: 526px;
+  border: 2px solid red;
 }
