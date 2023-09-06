@@ -1,0 +1,70 @@
+:root{
+    --animation: 200ms ease-in-out;
+    }
+
+.mobile-menu{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+
+
+.mobile-menu::before,
+.mobile-menu::after,
+.mobile-menu input {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background-color: #191919;
+  border-radius: 2px;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing);
+  transform-origin: center center;
+}
+
+.mobile-menu input {
+    appearance: none;
+    outline: none;
+    pointer-events: none;
+  }
+  .mobile-menu input:checked {
+    opacity: 0;
+    width: 0;
+  }
+  
+  .mobile-menu:has(input:checked)::before {
+    rotate: 45deg;
+    translate: 0px 8px;
+  }
+  .mobile-menu:has(input:checked)::after {
+    rotate: -45deg;
+    translate: 0px -6px;
+  }
+
+
+  .mobile-menu-slide {
+    width: 100%;
+    position: absolute;
+    top: 63px;
+    left: 0px;
+    padding-top: 2rem;
+    transition: translate var(--animation-timing);
+    translate: 100%;
+    background-color: rgb(172, 172, 172);
+    min-height: calc(100svh - 63px);
+  
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    ul li {
+      list-style: none;
+      text-align: center;
+    }
+  }
+  
