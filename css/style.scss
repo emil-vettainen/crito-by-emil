@@ -268,7 +268,8 @@ header{
     background-image: url(/images/bg-effect.png);
     background-position: bottom left;
     background-repeat: no-repeat;
-    padding-top: 0rem;
+    padding: 2rem 0;
+    
     
 
     
@@ -278,7 +279,7 @@ header{
     .container {
         display: flex;
         gap:20px;
-
+        
         
 
 
@@ -322,24 +323,24 @@ header{
        }
 
 
-        h1{
+        h1 {
             font-size: clamp(3rem, 2.2rem + 4vw, 5.5rem);
             text-transform:capitalize;
             font-family: 'DM Sans', sans-serif;
             
         }
 
-        p{
+        p {
             font-size: 1.25rem;
             width: 100%;
         }
 
-        a{
+        a {
             padding: 12px 30px;
 
-            @media (max-width: 992px){
-                width: 45%;
-                flex-grow: 1;
+            @media (max-width: 1200px){
+                width:45%;
+                flex-grow:1;
             }
 
             @media (max-width: 576px){
@@ -348,17 +349,19 @@ header{
             }
         }
 
-        .button:last-child{
+        .button:last-child {
         background-color: transparent;
         border-color: #191919;
         }
     }
 
     img{
+
+        display: none;
      
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
+        // width: 80%;
+        // margin-left: auto;
+        // margin-right: auto;
     
      
      object-fit: contain;
@@ -370,11 +373,17 @@ header{
       border: 1px solid gold;
       
      @media (min-width:992px){
-        width: 45%;
-        flex-grow: 1;
-        margin-right: -50px;
+        // width: 45%;
+        // flex-grow: 1;
+        
 
         
+     }
+
+     @media (min-width: 1200px){
+        display: block;
+        margin-right: -50px;
+        flex-grow: 1;
      }
       
     }
@@ -382,27 +391,18 @@ header{
 }
 
 
-.business-logo{
+.business-logo {
     padding: 5rem 0;
     .container{
         
          
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-evenly;
+      
         border:2px solid red;
-        gap:20px;
-
-        div {
-            display: flex;
-        justify-content: center;
-        align-items: center;
-            border: 2px solid gold;
-          
-            
-        }
-        
+        gap:40px;
+        padding: 1rem 0;
     }
 }
 
@@ -413,13 +413,25 @@ padding: 5rem 0;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
-    outline: 1px solid #dad9d3;
-    outline-offset: 4rem;
     gap:40px;
 
+
+    @media (min-width:576px){
+        outline: 1px solid #dad9d3;
+        outline-offset: 2rem;
+    }
+    
+
     @media (min-width: 992px){
+       
         flex-flow: row wrap;
         gap:0px;
+
+        @media (min-width: 1200px){
+            
+            outline-offset: 3rem;
+        }
+        
     }
     
         .features-info{
@@ -446,6 +458,7 @@ padding: 5rem 0;
 
             .button{
                 width: 100%;
+                padding: 12px 24px;
             }
         }
 
@@ -456,7 +469,7 @@ padding: 5rem 0;
         
         div{
             display: flex;
-            flex-flow: column wrap;
+            flex-flow: column;
             align-items: start;
             padding: 1.7rem 1rem;
             border: 1px solid gold;
@@ -491,19 +504,46 @@ padding: 5rem 0;
         display: flex;
         justify-content: space-between;
 
-        .about-img{
+        .about-img {
             padding: 0 4rem;
             position: relative;
 
-            div{
-                background-color: red;
+            div {
+                background-color: #BEEBFF;
                 position: absolute;
                 left:0;
                 bottom: 3rem;
+                padding: 2rem;
+
+
+                h4, span{
+                    font-weight: 700;
+                    font-family: 'DM Sans', sans-serif;
+                    font-size: 1.25rem;
+                    text-transform: capitalize;
+                    span{
+                        color:#F94D1C;
+                        font-size: 1rem; 
+                    }
+
+                    p{
+                        font-weight: 500;
+                        font-style: italic;
+                    }
+                }
             }
         }
 
         .about-info{
+
+            p{
+                color:#F94D1C;
+            }
+
+            h2{
+
+            }
+
             .button {
                 background-color: #191919;
                 border-color: #191919;

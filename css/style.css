@@ -222,7 +222,7 @@ header .container .menu .main-menu > a:hover {
   background-image: url(/images/bg-effect.png);
   background-position: bottom left;
   background-repeat: no-repeat;
-  padding-top: 0rem;
+  padding: 2rem 0;
 }
 .hero .container {
   display: flex;
@@ -260,7 +260,7 @@ header .container .menu .main-menu > a:hover {
 .hero .hero-info a {
   padding: 12px 30px;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .hero .hero-info a {
     width: 45%;
     flex-grow: 1;
@@ -276,18 +276,16 @@ header .container .menu .main-menu > a:hover {
   border-color: #191919;
 }
 .hero img {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  display: none;
   -o-object-fit: contain;
      object-fit: contain;
   border: 1px solid gold;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .hero img {
-    width: 45%;
-    flex-grow: 1;
+    display: block;
     margin-right: -50px;
+    flex-grow: 1;
   }
 }
 
@@ -297,16 +295,10 @@ header .container .menu .main-menu > a:hover {
 .business-logo .container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
   border: 2px solid red;
-  gap: 20px;
-}
-.business-logo .container div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid gold;
+  gap: 40px;
+  padding: 1rem 0;
 }
 
 .features {
@@ -316,14 +308,23 @@ header .container .menu .main-menu > a:hover {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
-  outline: 1px solid #dad9d3;
-  outline-offset: 4rem;
   gap: 40px;
+}
+@media (min-width: 576px) {
+  .features .container {
+    outline: 1px solid #dad9d3;
+    outline-offset: 2rem;
+  }
 }
 @media (min-width: 992px) {
   .features .container {
     flex-flow: row wrap;
     gap: 0px;
+  }
+}
+@media (min-width: 992px) and (min-width: 1200px) {
+  .features .container {
+    outline-offset: 3rem;
   }
 }
 .features .container .features-info {
@@ -347,6 +348,7 @@ header .container .menu .main-menu > a:hover {
 }
 .features .container .features-info .button {
   width: 100%;
+  padding: 12px 24px;
 }
 .features .container .features-box {
   display: flex;
@@ -355,7 +357,7 @@ header .container .menu .main-menu > a:hover {
 }
 .features .container .features-box div {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   align-items: start;
   padding: 1.7rem 1rem;
   border: 1px solid gold;
@@ -385,10 +387,28 @@ header .container .menu .main-menu > a:hover {
   position: relative;
 }
 .about .container .about-img div {
-  background-color: red;
+  background-color: #BEEBFF;
   position: absolute;
   left: 0;
   bottom: 3rem;
+  padding: 2rem;
+}
+.about .container .about-img div h4, .about .container .about-img div span {
+  font-weight: 700;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+.about .container .about-img div h4 span, .about .container .about-img div span span {
+  color: #F94D1C;
+  font-size: 1rem;
+}
+.about .container .about-img div h4 p, .about .container .about-img div span p {
+  font-weight: 500;
+  font-style: italic;
+}
+.about .container .about-info p {
+  color: #F94D1C;
 }
 .about .container .about-info .button {
   background-color: #191919;
