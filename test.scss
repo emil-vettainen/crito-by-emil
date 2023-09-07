@@ -1,0 +1,73 @@
+.features {
+   background-color: rgb(52, 184, 184);
+   
+ 
+   
+
+    .container {
+       
+        border: 2px solid red;
+        
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        @media (max-width: 992px){
+          
+            
+        }
+
+
+        .test1 {
+            
+            border: 1px solid green;
+            
+            
+
+            @media (max-width:992px) {
+                
+            }
+        }
+
+
+        .test2{
+            border:2px solid rgb(18, 18, 160);
+            
+            flex-flow: row wrap;
+           
+            
+            justify-content: start;
+            
+         
+
+
+            @media (max-width:992px) {
+         
+            }
+
+            div {
+                border: 1px solid gold;
+                
+                
+                
+                
+
+                @media (max-width:992px){
+                   
+                }
+                
+               
+               padding: 2rem;
+
+                @media (min-width: 1500px){
+                  
+                }
+
+                @media (max-width:256px){
+                  
+                }
+
+            }
+        }
+    }
+
+}

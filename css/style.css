@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @media (min-width: 2000px) {
   .container {
-    max-width: 75%;
+    max-width: 80%;
   }
 }
 html, body {
@@ -222,16 +222,16 @@ header .container .menu .main-menu > a:hover {
   background-image: url(/images/bg-effect.png);
   background-position: bottom left;
   background-repeat: no-repeat;
+  padding-top: 0rem;
 }
 .hero .container {
   display: flex;
-  flex-flow: row wrap;
-  padding-top: 2rem;
-  border: 2px solid red;
+  gap: 20px;
+  border: 1px solid red;
 }
 @media (max-width: 992px) {
   .hero .container {
-    flex-flow: column-reverse wrap;
+    flex-direction: column-reverse;
   }
 }
 .hero .hero-info {
@@ -240,24 +240,55 @@ header .container .menu .main-menu > a:hover {
   align-content: center;
   gap: 1rem;
   border: 2px solid gold;
+  width: 45%;
+  flex-grow: 1;
+}
+@media (max-width: 992px) {
+  .hero .hero-info {
+    width: 100%;
+  }
 }
 .hero .hero-info h1 {
-  font-size: clamp(3rem, 1.6019rem + 3.8835vw, 5rem);
+  font-size: clamp(3rem, 2.2rem + 4vw, 5.5rem);
   text-transform: capitalize;
   font-family: "DM Sans", sans-serif;
+}
+.hero .hero-info p {
+  font-size: 1.25rem;
+  width: 100%;
+}
+.hero .hero-info a {
+  padding: 12px 30px;
+}
+@media (max-width: 992px) {
+  .hero .hero-info a {
+    width: 45%;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 576px) {
+  .hero .hero-info a {
+    width: 100%;
+  }
 }
 .hero .hero-info .button:last-child {
   background-color: transparent;
   border-color: #191919;
 }
-.hero .hero-img {
-  display: flex;
-  justify-content: center;
-}
-.hero .hero-img img {
-  aspect-ratio: 4/3;
+.hero img {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   -o-object-fit: contain;
      object-fit: contain;
+  border: 1px solid gold;
+}
+@media (min-width: 992px) {
+  .hero img {
+    width: 45%;
+    flex-grow: 1;
+    margin-right: -50px;
+  }
 }
 
 .business-logo {
@@ -312,6 +343,7 @@ header .container .menu .main-menu > a:hover {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 2.8rem;
+  text-transform: capitalize;
 }
 .features .container .features-info .button {
   width: 100%;
@@ -319,12 +351,14 @@ header .container .menu .main-menu > a:hover {
 .features .container .features-box {
   display: flex;
   flex-flow: row wrap;
+  border: 1px solid red;
 }
 .features .container .features-box div {
   display: flex;
   flex-flow: column wrap;
   align-items: start;
-  padding: 1.5rem 1rem;
+  padding: 1.7rem 1rem;
+  border: 1px solid gold;
 }
 .features .container .features-box div h3 {
   font-family: "DM Sans", sans-serif;
