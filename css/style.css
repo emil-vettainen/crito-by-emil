@@ -465,47 +465,54 @@ header .container .menu .main-menu > a:hover {
 }
 
 .services {
-  padding: 5rem 0;
+  background-color: #F0EFE9;
+  padding: 7rem 0;
 }
-.services .container {
-  display: flex;
-  justify-content: start;
-  flex-flow: row wrap;
-  gap: 30px;
+.services .container .service-txt h2 {
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
-.services .container div {
-  border: 1px solid red;
+.services .container .service-box-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
-.services .container div h2 {
-  border: 1px solid red;
+.services .container .service-box-grid .service-box {
+  padding: 40px 20px 40px 20px;
+  background-color: #fff;
 }
-.services .container .service-box {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: start;
-  gap: 20px;
-  width: 100%;
-  border: 1px solid red;
+.services .container .service-box-grid .service-box img {
+  margin-bottom: 40px;
 }
-.services .container .service-box div {
-  display: flex;
-  flex-flow: column;
-  width: 20%;
-  flex-grow: 1;
-  border: 1px solid gold;
-  padding: 2rem 1.5rem;
+.services .container .service-box-grid .service-box h4 {
+  color: #191919;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.375rem;
+  text-transform: capitalize;
 }
-.services .container .service-box div span {
-  width: 40px;
-  height: 2px;
+.services .container .service-box-grid .service-box i {
+  border: 1px solid #191919;
   background-color: #191919;
-  margin-bottom: 30px;
+  color: #fff;
+  padding: 20px 20px;
+  border-radius: 50%;
+  margin-top: 15px;
+  float: right;
 }
-.services .container .service-box div p {
-  margin-bottom: 20px;
+.services .container .service-box-grid .service-box:hover {
+  background-color: #F9D783;
 }
-.services .container .service-box div i {
-  align-self: end;
+.services .container .service-box-grid .service-box:hover i {
+  background-color: #fff;
+  border-color: #fff;
+  color: #191919;
+}
+.services .container .btn-service {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .why-us {
