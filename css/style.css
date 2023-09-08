@@ -4,6 +4,13 @@
     max-width: 80%;
   }
 }
+html, body {
+  color: #191919;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .button {
   padding: 10px 30px;
   background-color: #F9D783;
@@ -25,11 +32,19 @@
   transform: scale(0.9);
 }
 
-html, body {
+h2 {
   color: #191919;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-transform: capitalize;
+}
+
+h3 {
+  color: #F94D1C;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  font-weight: 500;
 }
 
 header {
@@ -566,10 +581,13 @@ header .container .menu .main-menu > a:hover {
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   row-gap: 40px;
-  border: 1px solid red;
+  justify-content: center;
+}
+.project-case .container .blog-grid .blog-img img {
+  width: 100%;
 }
 .project-case .container .blog-grid .blog-info {
   margin-top: 30px;
@@ -586,6 +604,7 @@ header .container .menu .main-menu > a:hover {
   font-size: 0.875rem;
   color: #191919;
   float: right;
+  margin-bottom: 10px;
 }
 .project-case .container .blog-grid .blog-info a i {
   margin-left: 10px;
@@ -602,6 +621,7 @@ header .container .menu .main-menu > a:hover {
   background-color: #191919;
   border-color: #191919;
   color: #fff;
+  padding: 12px 24px;
 }
 
 .team {
