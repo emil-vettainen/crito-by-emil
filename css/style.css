@@ -296,9 +296,7 @@ header .container .menu .main-menu > a:hover {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  border: 2px solid red;
   gap: 40px;
-  padding: 1rem 0;
 }
 
 .features {
@@ -353,14 +351,12 @@ header .container .menu .main-menu > a:hover {
 .features .container .features-box {
   display: flex;
   flex-flow: row wrap;
-  border: 1px solid red;
 }
 .features .container .features-box div {
   display: flex;
   flex-flow: column;
   align-items: start;
   padding: 1.7rem 1rem;
-  border: 1px solid gold;
 }
 .features .container .features-box div h3 {
   font-family: "DM Sans", sans-serif;
@@ -407,14 +403,165 @@ header .container .menu .main-menu > a:hover {
   font-weight: 500;
   font-style: italic;
 }
-.about .container .about-info p {
+.about .container .about-info {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: start;
+  gap: 20px;
+}
+.about .container .about-info h3 {
   color: #F94D1C;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.about .container .about-info h2 {
+  color: #191919;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-transform: capitalize;
 }
 .about .container .about-info .button {
   background-color: #191919;
   border-color: #191919;
-  color: #ffffff;
+  color: #fff;
+  padding: 12px 24px;
+  margin-top: 50px;
+}
+.about .container .about-info .play {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 50px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #191919;
+  transition: transform 0.2s ease-in-out;
 }
 .about .container .about-info .play i {
-  margin-right: 5px;
+  font-size: 45px;
+  margin-right: 10px;
+}
+.about .container .about-info .play:hover {
+  transform: scale(0.9);
+}
+
+.services {
+  padding: 5rem 0;
+}
+.services .container {
+  display: flex;
+  justify-content: start;
+  flex-flow: row wrap;
+  gap: 30px;
+}
+.services .container div {
+  border: 1px solid red;
+}
+.services .container div h2 {
+  border: 1px solid red;
+}
+.services .container .service-box {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  gap: 20px;
+  width: 100%;
+  border: 1px solid red;
+}
+.services .container .service-box div {
+  display: flex;
+  flex-flow: column;
+  width: 20%;
+  flex-grow: 1;
+  border: 1px solid gold;
+  padding: 2rem 1.5rem;
+}
+.services .container .service-box div span {
+  width: 40px;
+  height: 2px;
+  background-color: #191919;
+  margin-bottom: 30px;
+}
+.services .container .service-box div p {
+  margin-bottom: 20px;
+}
+.services .container .service-box div i {
+  align-self: end;
+}
+
+.why-us {
+  padding: 5rem 0;
+}
+.why-us .container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.why-us .container .us-info {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+.why-us .container .us-info > h3 {
+  color: #F94D1C;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.why-us .container .us-info h2 {
+  color: #191919;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-transform: capitalize;
+}
+.why-us .container .us-icon {
+  display: flex;
+  flex-flow: column;
+  gap: 40px;
+  margin-top: 20px;
+}
+.why-us .container .us-icon .us-icon-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.why-us .container .us-icon .us-icon-info .icon-txt {
+  display: flex;
+  flex-direction: column;
+}
+.why-us .container .us-icon .us-icon-info .icon-txt h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 0;
+}
+.why-us .container .us-icon .us-icon-info .icon-txt p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+.why-us .container .us-img {
+  z-index: 1;
+}
+.why-us .container span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 55%;
+  min-height: 400px;
+  background-color: #F0EFE9;
+}
+
+.project-case {
+  padding: 5rem 0;
+}
+.project-case .container {
+  display: flex;
+  flex-direction: column;
+}
+.project-case .container div {
+  display: flex;
+  justify-content: center;
 }
