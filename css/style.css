@@ -597,7 +597,7 @@ header .container .menu .main-menu > a:hover {
   width: 100%;
 }
 .project-case .container .blog-grid .blog-info {
-  text-align: end;
+  text-align: flex-end;
   margin-top: 30px;
 }
 .project-case .container .blog-grid .blog-info p {
@@ -606,7 +606,7 @@ header .container .menu .main-menu > a:hover {
   font-weight: 700;
   color: #191919;
   margin-bottom: 10px;
-  text-align: start;
+  text-align: flex-start;
 }
 .project-case .container .blog-grid .blog-info a {
   text-decoration: none;
@@ -665,4 +665,55 @@ header .container .menu .main-menu > a:hover {
 }
 .team .container .team-grid img {
   width: 100%;
+}
+
+.article-news {
+  padding: 5rem 0;
+}
+.article-news .container .news-head {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.article-news .container .news-head h3 {
+  width: 100%;
+}
+.article-news .container .news-head h2 {
+  margin: 0;
+}
+.article-news .container .news-head .button {
+  background-color: transparent;
+  border-color: #191919;
+  padding: 12px 24px;
+}
+.article-news .container .article-news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+}
+.article-news .container .article-news-grid .article-news-box .box-img img {
+  width: 100%;
+}
+.article-news .container .article-news-grid .article-news-box .box-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F9D783;
+  width: 50px;
+  height: 65px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.article-news .container .article-news-grid .article-news-box .box-date p {
+  text-align: center;
+  margin: 0;
+  line-height: 18px;
+}
+.article-news .container .article-news-grid .article-news-box .box-date p span {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 700;
 }
