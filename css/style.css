@@ -556,7 +556,8 @@ header .container .menu .main-menu > a:hover {
   display: flex;
   flex-direction: column;
 }
-.why-us .container .us-icon .us-icon-info .icon-txt h3 {
+.why-us .container .us-icon .us-icon-info .icon-txt h4 {
+  font-family: "DM Sans", sans-serif;
   font-size: 1.375rem;
   font-weight: 700;
   margin: 0;
@@ -584,19 +585,19 @@ header .container .menu .main-menu > a:hover {
   text-align: center;
 }
 .project-case .container .blog-grid {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   -moz-column-gap: 30px;
        column-gap: 30px;
   row-gap: 40px;
-  justify-content: center;
 }
 .project-case .container .blog-grid .blog-img img {
   width: 100%;
 }
 .project-case .container .blog-grid .blog-info {
+  text-align: end;
   margin-top: 30px;
 }
 .project-case .container .blog-grid .blog-info p {
@@ -605,12 +606,12 @@ header .container .menu .main-menu > a:hover {
   font-weight: 700;
   color: #191919;
   margin-bottom: 10px;
+  text-align: start;
 }
 .project-case .container .blog-grid .blog-info a {
   text-decoration: none;
   font-size: 0.875rem;
   color: #191919;
-  float: right;
   margin-bottom: 10px;
 }
 .project-case .container .blog-grid .blog-info a i {
@@ -620,11 +621,11 @@ header .container .menu .main-menu > a:hover {
   border-bottom: 1px solid #dad9d3;
   margin-bottom: 15px;
 }
-.project-case .container .btn {
+.project-case .container .btn-projects {
   display: flex;
   justify-content: center;
 }
-.project-case .container .btn .button {
+.project-case .container .btn-projects .button {
   background-color: #191919;
   border-color: #191919;
   color: #fff;
@@ -633,32 +634,35 @@ header .container .menu .main-menu > a:hover {
 
 .team {
   padding: 5rem 0;
+  background-color: #F0D082;
 }
 .team .container .team-txt {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px;
+  padding: 2rem 0;
 }
 .team .container .team-txt h3 {
   width: 100%;
 }
 .team .container .team-txt h2 {
-  font-size: 2rem;
   margin: 0;
 }
 .team .container .team-txt .button {
   padding: 12px 24px;
+  background-color: transparent;
+  border-color: #191919;
 }
-.team .container .team-info-grid {
+.team .container .team-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+  margin-bottom: 40px;
 }
-.team .container .team-info-grid div p {
-  font-size: 4rem;
-}
-.team .container .team-info-grid div img {
+.team .container .team-grid img {
   width: 100%;
 }
