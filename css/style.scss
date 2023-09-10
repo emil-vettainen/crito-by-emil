@@ -701,9 +701,7 @@ padding: 5rem 0;
                     margin-top: 15px;
                     float: right;
 
-                    &:hover {
-                        
-                    }
+                  
                 }
 
                 &:hover {
@@ -894,7 +892,7 @@ padding: 5rem 0;
 
 
 .team {
-    padding: 5rem 0;
+    padding-top: 5rem;
     background-color: #F0D082;
 
     .container {
@@ -959,7 +957,13 @@ padding: 5rem 0;
 
 .testimonial {
     padding: 5rem 0;
+    background-color: #F0D082;
     .container {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+      
+        outline-offset: 2rem;
+        background-color: #fff;
         .testimonial-txt {
             display: flex;
             flex-direction: column;
@@ -970,9 +974,11 @@ padding: 5rem 0;
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
             .review {
                 border: 1px solid red;
                 padding: 2rem;
+                background-color: #fff;
                 .review-txt {
 
                     p {
@@ -1141,12 +1147,67 @@ padding: 5rem 0;
        
 
 .footer {
-    // background-color: #0E1021 ;
+    background-color: #0E1021;
+    background-image: url(/images/footer-bg-effect.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
     .container {
+        padding: 5rem 0;
 
        .footer-grid {
         display: grid;
-        grid-template-columns: 300px repeat(4, 1fr);
+        grid-template-columns: 320px 1fr 1fr 1fr 1fr;
+        column-gap: 80px;
+        
+        
+            .footer-about {
+                display: flex;
+                flex-flow: row wrap;
+                gap: 20px;
+                width: 320px;
+                
+                
+
+                p {
+                    color: #fff;
+                }
+            }
+
+           
+
+            .company, .help, .resources, .link {
+                h4 {
+                    color: #fff;
+                }
+                padding-top: 2.5rem;
+                
+                nav {
+                   
+                    margin-top: 40px;
+                   
+                    ul {
+                        list-style: none;
+                        padding: 0;
+
+                        li {
+
+                            margin-bottom: 20px;
+
+                            a {
+                                text-decoration: none;
+                                color: #fff;
+                                
+                            }
+                        }
+                        
+                    }
+
+                   
+                    
+                
+                }
+            }
+
        }
 
        
@@ -1156,12 +1217,24 @@ padding: 5rem 0;
 }
 
 .footer-bottom {
-    border-top: 1px solid red;
-    padding: 1rem 0;
+    border-top: 1px solid #dad9d3;
+    padding: 1.5rem 0;
+    background-color: #0E1021;
     .container {
-        div {
-            display: flex;
-            justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            color: #fff;
+            margin:0;
         }
+
+        a {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+       
     }
 }

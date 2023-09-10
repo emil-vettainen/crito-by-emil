@@ -662,7 +662,7 @@ header .container .menu .main-menu > a:hover {
 }
 
 .team {
-  padding: 5rem 0;
+  padding-top: 5rem;
   background-color: #F0D082;
 }
 .team .container .team-txt {
@@ -711,6 +711,13 @@ header .container .menu .main-menu > a:hover {
 
 .testimonial {
   padding: 5rem 0;
+  background-color: #F0D082;
+}
+.testimonial .container {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  outline-offset: 2rem;
+  background-color: #fff;
 }
 .testimonial .container .testimonial-txt {
   display: flex;
@@ -721,10 +728,13 @@ header .container .menu .main-menu > a:hover {
 .testimonial .container .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 20px;
+       column-gap: 20px;
 }
 .testimonial .container .testimonial-grid .review {
   border: 1px solid red;
   padding: 2rem;
+  background-color: #fff;
 }
 .testimonial .container .testimonial-grid .review .review-txt p {
   font-size: 1.125rem;
@@ -836,16 +846,67 @@ header .container .menu .main-menu > a:hover {
   margin: 0;
 }
 
+.footer {
+  background-color: #0E1021;
+  background-image: url(/images/footer-bg-effect.png);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+.footer .container {
+  padding: 5rem 0;
+}
 .footer .container .footer-grid {
   display: grid;
-  grid-template-columns: 300px repeat(4, 1fr);
+  grid-template-columns: 320px 1fr 1fr 1fr 1fr;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+}
+.footer .container .footer-grid .footer-about {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  width: 320px;
+}
+.footer .container .footer-grid .footer-about p {
+  color: #fff;
+}
+.footer .container .footer-grid .company, .footer .container .footer-grid .help, .footer .container .footer-grid .resources, .footer .container .footer-grid .link {
+  padding-top: 2.5rem;
+}
+.footer .container .footer-grid .company h4, .footer .container .footer-grid .help h4, .footer .container .footer-grid .resources h4, .footer .container .footer-grid .link h4 {
+  color: #fff;
+}
+.footer .container .footer-grid .company nav, .footer .container .footer-grid .help nav, .footer .container .footer-grid .resources nav, .footer .container .footer-grid .link nav {
+  margin-top: 40px;
+}
+.footer .container .footer-grid .company nav ul, .footer .container .footer-grid .help nav ul, .footer .container .footer-grid .resources nav ul, .footer .container .footer-grid .link nav ul {
+  list-style: none;
+  padding: 0;
+}
+.footer .container .footer-grid .company nav ul li, .footer .container .footer-grid .help nav ul li, .footer .container .footer-grid .resources nav ul li, .footer .container .footer-grid .link nav ul li {
+  margin-bottom: 20px;
+}
+.footer .container .footer-grid .company nav ul li a, .footer .container .footer-grid .help nav ul li a, .footer .container .footer-grid .resources nav ul li a, .footer .container .footer-grid .link nav ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .footer-bottom {
-  border-top: 1px solid red;
-  padding: 1rem 0;
+  border-top: 1px solid #dad9d3;
+  padding: 1.5rem 0;
+  background-color: #0E1021;
 }
-.footer-bottom .container div {
+.footer-bottom .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.footer-bottom .container p {
+  color: #fff;
+  margin: 0;
+}
+.footer-bottom .container a {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-left: 10px;
 }
