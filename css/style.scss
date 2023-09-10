@@ -961,8 +961,9 @@ padding: 5rem 0;
     .container {
         padding-top: 7rem;
         padding-bottom: 7rem;
-      
-        outline-offset: 2rem;
+        
+        
+        
         background-color: #fff;
         .testimonial-txt {
             display: flex;
@@ -976,8 +977,7 @@ padding: 5rem 0;
             grid-template-columns: repeat(3, 1fr);
             column-gap: 20px;
             .review {
-                border: 1px solid red;
-                padding: 2rem;
+                padding: 2rem 1rem;
                 background-color: #fff;
                 .review-txt {
 
@@ -1029,18 +1029,19 @@ padding: 5rem 0;
 
 
 .article-news {
-
     padding: 5rem 0;
 
     .container {
+        
 
         .news-head {
-
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
+            align-items: center;
             gap: 20px;
             margin-bottom: 40px;
+            padding: 2rem 0;
 
             h3 {
                 width: 100%;
@@ -1051,34 +1052,53 @@ padding: 5rem 0;
             }
 
             .button {
-
                 background-color: transparent;
                 border-color: #191919;
                 padding: 12px 24px;
+                flex-grow: 1;
                 
 
-            
+                @media (min-width: 576px) {
+
+                    flex-grow: 0;
+                    
+                    
+                }
                 
+
             }
-
         }
 
         .article-news-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
             column-gap: 20px;
+            row-gap: 20px;
             
+
+            @media (min-width: 576px ) {
+                grid-template-columns: 1fr 1fr;
+                
+                
+                
+                
+
+            }
+            
+            @media (min-width: 992px) {
+                grid-template-columns: 1fr 1fr 1fr;
+
+            }
+                
 
             .article-news-box {
                 position: relative;
 
                 .box-img {
                 
-
                     img {
                         width: 100%;
                     }
-    
                 }
     
                 .box-date {
@@ -1092,15 +1112,11 @@ padding: 5rem 0;
                     top: 20px;
                     left: 20px;
                     
-                    
-                    
-    
                     p {
                         text-align: center;
                         margin:0;
                         line-height: 18px;
                         
-    
                         span {
                             font-family: 'DM Sans', sans-serif;
                             font-size: 1.375rem;
@@ -1141,6 +1157,17 @@ padding: 5rem 0;
 
         h2 {
             margin: 0;
+        }
+
+        input {
+            border-radius: 25px;
+            padding: 12px 24px;
+            border: none;
+        }
+
+        .button {
+            padding: 12px 24px;
+            margin-left: 10px;
         }
     }
 }

@@ -716,7 +716,6 @@ header .container .menu .main-menu > a:hover {
 .testimonial .container {
   padding-top: 7rem;
   padding-bottom: 7rem;
-  outline-offset: 2rem;
   background-color: #fff;
 }
 .testimonial .container .testimonial-txt {
@@ -732,8 +731,7 @@ header .container .menu .main-menu > a:hover {
        column-gap: 20px;
 }
 .testimonial .container .testimonial-grid .review {
-  border: 1px solid red;
-  padding: 2rem;
+  padding: 2rem 1rem;
   background-color: #fff;
 }
 .testimonial .container .testimonial-grid .review .review-txt p {
@@ -773,8 +771,10 @@ header .container .menu .main-menu > a:hover {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   margin-bottom: 40px;
+  padding: 2rem 0;
 }
 .article-news .container .news-head h3 {
   width: 100%;
@@ -786,12 +786,29 @@ header .container .menu .main-menu > a:hover {
   background-color: transparent;
   border-color: #191919;
   padding: 12px 24px;
+  flex-grow: 1;
+}
+@media (min-width: 576px) {
+  .article-news .container .news-head .button {
+    flex-grow: 0;
+  }
 }
 .article-news .container .article-news-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   -moz-column-gap: 20px;
        column-gap: 20px;
+  row-gap: 20px;
+}
+@media (min-width: 576px) {
+  .article-news .container .article-news-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .article-news .container .article-news-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 .article-news .container .article-news-grid .article-news-box {
   position: relative;
@@ -844,6 +861,15 @@ header .container .menu .main-menu > a:hover {
 }
 .sign-up .container h2 {
   margin: 0;
+}
+.sign-up .container input {
+  border-radius: 25px;
+  padding: 12px 24px;
+  border: none;
+}
+.sign-up .container .button {
+  padding: 12px 24px;
+  margin-left: 10px;
 }
 
 .footer {
