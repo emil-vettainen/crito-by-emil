@@ -237,7 +237,7 @@ header .container .menu .main-menu > a:hover {
 .hero {
   background-color: #f0efe9;
   background-image: url(/images/bg-effect.png);
-  background-position: 0% 110%;
+  background-position: 0% 100%;
   background-repeat: no-repeat;
   padding-top: 1rem;
   padding-bottom: 2rem;
@@ -336,22 +336,9 @@ header .container .menu .main-menu > a:hover {
   align-content: start;
   gap: 20px;
 }
-.features .container .features-info p {
-  color: #F94D1C;
-  font-weight: 500;
-  text-transform: capitalize;
-  font-size: 1.125rem;
-}
-.features .container .features-info h2 {
-  color: #191919;
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
-  font-size: 2.8rem;
-  text-transform: capitalize;
-}
 .features .container .features-info .button {
   width: 100%;
-  padding: 12px 24px;
+  padding: 12px 30px;
 }
 .features .container .features-box {
   display: flex;
@@ -364,14 +351,8 @@ header .container .menu .main-menu > a:hover {
   align-items: start;
   padding: 1.7rem 1rem;
 }
-.features .container .features-box div h3 {
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.375rem;
-  text-transform: capitalize;
-}
 .features .container .features-box div p {
   color: 500000E5E;
-  font-size: 1;
 }
 .features .container .features-box div img {
   margin-bottom: 30px;
