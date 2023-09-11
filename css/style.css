@@ -237,14 +237,19 @@ header .container .menu .main-menu > a:hover {
 .hero {
   background-color: #f0efe9;
   background-image: url(/images/bg-effect.png);
-  background-position: bottom left;
+  background-position: 0% 110%;
   background-repeat: no-repeat;
-  padding: 2rem 0;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+@media (min-width: 1200px) {
+  .hero {
+    padding-bottom: 0;
+  }
 }
 .hero .container {
   display: flex;
   gap: 20px;
-  border: 1px solid red;
 }
 @media (max-width: 992px) {
   .hero .container {
@@ -256,14 +261,6 @@ header .container .menu .main-menu > a:hover {
   flex-flow: row wrap;
   align-content: center;
   gap: 1rem;
-  border: 2px solid gold;
-  width: 45%;
-  flex-grow: 1;
-}
-@media (max-width: 992px) {
-  .hero .hero-info {
-    width: 100%;
-  }
 }
 .hero .hero-info h1 {
   font-size: clamp(3rem, 2.2rem + 4vw, 5.5rem);
@@ -276,16 +273,11 @@ header .container .menu .main-menu > a:hover {
 }
 .hero .hero-info a {
   padding: 12px 30px;
+  flex-grow: 1;
 }
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .hero .hero-info a {
-    width: 45%;
-    flex-grow: 1;
-  }
-}
-@media (max-width: 576px) {
-  .hero .hero-info a {
-    width: 100%;
+    flex-grow: 0;
   }
 }
 .hero .hero-info .button:last-child {
@@ -294,15 +286,11 @@ header .container .menu .main-menu > a:hover {
 }
 .hero img {
   display: none;
-  -o-object-fit: contain;
-     object-fit: contain;
-  border: 1px solid gold;
 }
 @media (min-width: 1200px) {
   .hero img {
     display: block;
     margin-right: -50px;
-    flex-grow: 1;
   }
 }
 
@@ -852,15 +840,27 @@ header .container .menu .main-menu > a:hover {
   background-color: #F0EFE9;
   background-image: url(/icons/bg-signup.svg);
   background-repeat: no-repeat;
-  background-position: 100% 70%;
+  background-position: 100% 100%;
+}
+@media (min-width: 768px) {
+  .sign-up {
+    background-position: 100% 70%;
+  }
 }
 .sign-up .container {
   display: flex;
-  gap: 160px;
-  align-items: center;
+  flex-flow: column;
+  gap: 20px;
+}
+@media (min-width: 1400px) {
+  .sign-up .container {
+    flex-direction: row;
+    gap: 180px;
+  }
 }
 .sign-up .container h2 {
   margin: 0;
+  text-align: center;
 }
 .sign-up .container input {
   border-radius: 25px;
@@ -869,7 +869,17 @@ header .container .menu .main-menu > a:hover {
 }
 .sign-up .container .button {
   padding: 12px 24px;
-  margin-left: 10px;
+}
+.sign-up .container .sign-up-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .sign-up .container .sign-up-form {
+    flex-direction: row;
+  }
 }
 
 .footer {

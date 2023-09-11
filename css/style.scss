@@ -287,68 +287,35 @@ header {
 .hero {
     background-color: #f0efe9;
     background-image: url(/images/bg-effect.png);
-    background-position: bottom left;
+    background-position: 0% 110%;
     background-repeat: no-repeat;
-    padding: 2rem 0;
-    
-    
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 
-    
-   
-    
+    @media (min-width: 1200px) {
+        padding-bottom: 0;
+    }
 
     .container {
         display: flex;
         gap:20px;
-        
-        
 
-
-        border: 1px solid red;
-
-
-    
-   
-  
-    
-   
-    
-
-  
-
-
-
-   @media (max-width: 992px)
-   {
-    flex-direction: column-reverse;
-   }
+        @media (max-width: 992px)
+        {
+            flex-direction: column-reverse;
+        }
     }
 
-    .hero-info{
+    .hero-info {
         display: flex;
         flex-flow: row wrap;
         align-content: center;
         gap:1rem;
-        
-      
-    
-    
-    
-        border: 2px solid gold;
-       width:45%;
-       flex-grow:1;
-      
-    
-       @media (max-width: 992px){
-        width: 100%;
-       }
-
 
         h1 {
             font-size: clamp(3rem, 2.2rem + 4vw, 5.5rem);
-            text-transform:capitalize;
+            text-transform: capitalize;
             font-family: 'DM Sans', sans-serif;
-            
         }
 
         p {
@@ -358,15 +325,10 @@ header {
 
         a {
             padding: 12px 30px;
+            flex-grow: 1;
 
-            @media (max-width: 1200px){
-                width:45%;
-                flex-grow:1;
-            }
-
-            @media (max-width: 576px){
-                width: 100%;
-
+            @media (min-width: 1200px){
+                flex-grow:0;
             }
         }
 
@@ -376,40 +338,17 @@ header {
         }
     }
 
-    img{
-
+    img {
         display: none;
-     
-        // width: 80%;
-        // margin-left: auto;
-        // margin-right: auto;
-    
-     
-     object-fit: contain;
-     
-    
-     
-    
-       
-      border: 1px solid gold;
-      
-     @media (min-width:992px){
-        // width: 45%;
-        // flex-grow: 1;
-        
 
-        
-     }
-
-     @media (min-width: 1200px){
-        display: block;
-        margin-right: -50px;
-        flex-grow: 1;
-     }
-      
+        @media (min-width: 1200px){
+            display: block;
+            margin-right: -50px;
+            // flex-grow: 1;
+        }
     }
-    
 }
+
 
 
 .business-logo {
@@ -1148,15 +1087,25 @@ padding: 5rem 0;
     background-color: #F0EFE9 ;
     background-image: url(/icons/bg-signup.svg);
     background-repeat: no-repeat;
-    background-position: 100% 70%;
+    background-position: 100% 100%;
+
+    @media (min-width: 768px) {
+        background-position: 100% 70%;
+    }
 
     .container {
         display: flex;
-        gap: 160px;
-        align-items: center;
+        flex-flow: column;
+        gap: 20px;
 
+        @media (min-width: 1400px) {
+            flex-direction: row;
+            gap: 180px;
+        }
+        
         h2 {
             margin: 0;
+            text-align: center;
         }
 
         input {
@@ -1167,7 +1116,16 @@ padding: 5rem 0;
 
         .button {
             padding: 12px 24px;
-            margin-left: 10px;
+        }
+        .sign-up-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+
+            @media (min-width: 768px) {
+                flex-direction: row;  
+            }
         }
     }
 }
