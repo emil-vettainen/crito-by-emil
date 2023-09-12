@@ -433,7 +433,8 @@ header .container .menu .main-menu > a:hover {
 .about .container .about-info .about-buttons {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  margin-top: 40px;
 }
 @media (min-width: 576px) {
   .about .container .about-info .about-buttons {
@@ -566,31 +567,37 @@ header .container .menu .main-menu > a:hover {
 }
 .why-us .container {
   display: flex;
+  flex-flow: column;
+  gap: 40px;
   justify-content: space-between;
+}
+@media (min-width: 992px) {
+  .why-us .container {
+    flex-flow: row;
+  }
 }
 .why-us .container .us-info {
   display: flex;
   flex-flow: column;
   gap: 20px;
 }
-.why-us .container .us-info > h3 {
-  color: #F94D1C;
-  font-size: 1.125rem;
-  text-transform: capitalize;
-  font-weight: 500;
-}
-.why-us .container .us-info h2 {
-  color: #191919;
-  font-family: "DM Sans", sans-serif;
-  font-weight: 700;
-  font-size: 2.8rem;
-  text-transform: capitalize;
-}
 .why-us .container .us-icon {
-  display: flex;
-  flex-flow: column;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 40px;
   margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .why-us .container .us-icon {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .why-us .container .us-icon {
+    grid-template-columns: 1fr;
+  }
 }
 .why-us .container .us-icon .us-icon-info {
   display: flex;
@@ -602,9 +609,6 @@ header .container .menu .main-menu > a:hover {
   flex-direction: column;
 }
 .why-us .container .us-icon .us-icon-info .icon-txt h4 {
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.375rem;
-  font-weight: 700;
   margin: 0;
 }
 .why-us .container .us-icon .us-icon-info .icon-txt p {
@@ -612,15 +616,46 @@ header .container .menu .main-menu > a:hover {
   margin-bottom: 0px;
 }
 .why-us .container .us-img {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
+}
+@media (min-width: 1200px) {
+  .why-us .container .us-img {
+    align-items: flex-start;
+  }
+}
+.why-us .container .us-img img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .why-us .container span {
   position: absolute;
+  left: 0;
   right: 0;
-  bottom: 70px;
-  width: 55%;
-  min-height: 430px;
+  top: 70%;
+  bottom: 80px;
   background-color: #F0EFE9;
+}
+@media (min-width: 768px) {
+  .why-us .container span {
+    top: 60%;
+  }
+}
+@media (min-width: 992px) {
+  .why-us .container span {
+    top: 45%;
+    left: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .why-us .container span {
+    left: 45%;
+    top: 35%;
+  }
 }
 
 .project-case {
@@ -633,38 +668,46 @@ header .container .menu .main-menu > a:hover {
   margin-top: 60px;
   margin-bottom: 60px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   -moz-column-gap: 30px;
        column-gap: 30px;
   row-gap: 40px;
 }
-.project-case .container .blog-grid .blog-img img {
+@media (min-width: 768px) {
+  .project-case .container .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.project-case .container .blog-grid .blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.project-case .container .blog-grid .blog-card img {
   width: 100%;
 }
-.project-case .container .blog-grid .blog-info {
+.project-case .container .blog-grid .blog-card .blog-info {
   display: flex;
   flex-flow: column;
-  margin-top: 30px;
+  justify-content: space-between;
+  flex: 1;
 }
-.project-case .container .blog-grid .blog-info p {
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.375rem;
-  font-weight: 700;
-  color: #191919;
-  margin-bottom: 10px;
+.project-case .container .blog-grid .blog-card .blog-info h4 {
+  padding-bottom: 10px;
 }
-.project-case .container .blog-grid .blog-info a {
+.project-case .container .blog-grid .blog-card .blog-info .blog-button {
+  border-top: 1px solid #dad9d3;
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.project-case .container .blog-grid .blog-card .blog-info .blog-button a {
   text-decoration: none;
   font-size: 0.875rem;
   color: #191919;
-  margin-bottom: 10px;
 }
-.project-case .container .blog-grid .blog-info a i {
+.project-case .container .blog-grid .blog-card .blog-info .blog-button a i {
   margin-left: 10px;
-}
-.project-case .container .blog-grid .blog-info div:nth-child(1) {
-  border-bottom: 1px solid #dad9d3;
-  margin-bottom: 15px;
 }
 .project-case .container .btn-projects {
   display: flex;
@@ -674,7 +717,7 @@ header .container .menu .main-menu > a:hover {
   background-color: #191919;
   border-color: #191919;
   color: #fff;
-  padding: 12px 24px;
+  padding: 12px 30px;
 }
 
 .team {
