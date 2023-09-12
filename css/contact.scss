@@ -89,64 +89,84 @@
 
 .connect-form {
    
-    padding-top: 5rem;
+    padding-bottom: 6rem;
     .container {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-top: 7rem;
+        padding-bottom: 5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
         background-color: #f0efe9;
-        
 
-        input {
-            width: 100%;
-            padding: 1rem;
-            border-radius: 25px;
-            
-            
-            border: 1px solid #fff;
+        .message-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
 
-            
-        }
-
-        textarea {
-            border-radius: 25px;
-            width: 100%;
-            padding: 1rem;
-            border-color: #fff;
-        }
-        .button {
-            width: 100%;
-        }
-        
-        @media (min-width: 576px) {
-            input, textarea, .button {
-                width: 80%;
+            input {
+           
+                padding: 1rem;
+                border-radius: 25px;
+                
+                
+                border: 1px solid #fff;
+    
+                
+            }
+    
+            textarea {
+                border-radius: 25px;
+                
+                padding: 1rem;
+                border-color: #fff;
+            }
+            .button {
+                
             }
 
-            
         }
+        
 
-        @media (min-width: 768px) {
-            input, textarea, .button {
-                width: 50%;
-            }
+        
+        
+        // @media (min-width: 576px) {
+        //     input, textarea, .button {
+        //         width: 80%;
+        //     }
 
             
-        }
+        // }
+
+        // @media (min-width: 768px) {
+        //     input, textarea, .button {
+        //         width: 50%;
+        //     }
+
+            
+        // }
     }
 }
 
 .google-maps {
-    padding: 12rem 0;
-    background-image: url(/images/google-maps.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    // padding: 12rem 0;
+    // background-image: url(/images/google-maps.jpg);
+    // background-repeat: no-repeat;
+    // background-position: 50% 50%;
 
-    @media (min-width: 576px) {
+    // @media (min-width: 576px) {
 
+    // }
+        
+
+
+    img {
+        
+       min-height: 400px;
+       width: 100%;
+       object-fit: cover;
+        
     }
+    
 }
 

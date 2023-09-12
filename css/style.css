@@ -168,10 +168,6 @@ header .container .menu .main-menu > a:hover {
   }
 }
 
-:root {
-  --animation-timing: 200ms ease-in-out;
-}
-
 .mobile-menu::before,
 .mobile-menu::after,
 .mobile-menu input {
@@ -180,7 +176,7 @@ header .container .menu .main-menu > a:hover {
   height: 2px;
   background-color: #191919;
   border-radius: 2px;
-  transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing);
+  transition: opacity 200ms ease-in-out, width 200ms ease-in-out, rotate 200ms ease-in-out, translate 200ms ease-in-out;
   transform-origin: center center;
 }
 
@@ -298,10 +294,25 @@ header .container .menu .main-menu > a:hover {
   padding: 5rem 0;
 }
 .business-logo .container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 40px;
+  place-items: center;
+}
+@media (min-width: 567px) {
+  .business-logo .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .business-logo .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .business-logo .container {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .features {
@@ -637,7 +648,7 @@ header .container .menu .main-menu > a:hover {
   left: 0;
   right: 0;
   top: 85%;
-  bottom: 0;
+  bottom: 80px;
   background-color: #F0EFE9;
 }
 @media (min-width: 576px) {
@@ -1007,7 +1018,6 @@ header .container .menu .main-menu > a:hover {
   display: flex;
   flex-flow: row wrap;
   gap: 20px;
-  border: 1px solid hotpink;
 }
 @media (min-width: 576px) and (max-width: 1200px) {
   .footer .container .footer-about {

@@ -69,16 +69,13 @@ header {
     background-color: #f0efe9;
     padding: 1rem 0;
 
-    .container{
+    .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 4.375rem;
         
-
-        
-
-        .menu{
+        .menu {
             display: none;
             flex-grow: 1;
            
@@ -92,7 +89,6 @@ header {
                 align-items: center;
                 padding-bottom: .5rem;
                 border-bottom: 1px solid #dad9d3;
-                
                 
                 .contact{
                     display: flex;
@@ -108,19 +104,19 @@ header {
                         transition: transform .2s ease-in-out;
                        }
 
-                       a{
+                       a {
                         font-family: 'Inter', sans-serif;
                         text-decoration: none;
                         color: #191919;
                         font-size: 0.875rem;
                         font-weight: 300;
                         
-                        &:hover{
-                            i{
-                                transform: scale(1.3);
+                            &:hover{
+                                i{
+                                    transform: scale(1.3);
+                                }
                             }
-                           }
-                       }
+                        }
 
                        &.last{
                         border:none;
@@ -128,7 +124,8 @@ header {
                     }
                 }
 
-                .social-media{
+                .social-media {
+
                     a {
                         color: #191919;
                         font-size: 1.2rem;
@@ -205,10 +202,10 @@ header {
     }   
 }
 
+// Insperation från flera koder
+// Där jag sedan anpassat koden som jag vill ha den.
 
-
-
-  .mobile-menu {
+.mobile-menu {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -220,10 +217,8 @@ header {
     }
   }
 
-  :root {
-    --animation-timing: 200ms ease-in-out;
-  }
-  
+
+
   .mobile-menu::before,
   .mobile-menu::after,
   .mobile-menu input {
@@ -232,14 +227,14 @@ header {
     height: 2px;
     background-color: #191919;
     border-radius: 2px;
-    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing);
+    transition: opacity 200ms ease-in-out, width 200ms ease-in-out, rotate 200ms ease-in-out, translate 200ms ease-in-out;
     transform-origin: center center;
   }
   
   .mobile-menu input {
     -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     outline: none;
     pointer-events: none;
   }
@@ -292,18 +287,18 @@ header {
     padding-top: 1rem;
     padding-bottom: 2rem;
 
-    @media (min-width: 1200px) {
-        padding-bottom: 0;
-    }
-
-    .container {
-        display: flex;
-        gap:20px;
-
-        @media (max-width: 992px) {
-            flex-direction: column-reverse;
+        @media (min-width: 1200px) {
+            padding-bottom: 0;
         }
-    }
+
+        .container {
+            display: flex;
+            gap:20px;
+
+            @media (max-width: 992px) {
+                flex-direction: column-reverse;
+            }
+        }
 
     .hero-info {
         display: flex;
@@ -339,11 +334,14 @@ header {
 
     img {
         display: none;
+        
+
+        
 
         @media (min-width: 1200px){
             display: block;
             margin-right: -50px;
-            // flex-grow: 1;
+            
         }
     }
 }
@@ -354,10 +352,27 @@ header {
     padding: 5rem 0;
 
     .container {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        gap:40px;
+        // display: flex;
+        // flex-flow: row wrap;
+        // justify-content: space-evenly;
+        // gap:40px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        place-items: center;
+        
+
+        @media (min-width: 567px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (min-width: 992px) {
+            grid-template-columns: repeat(5, 1fr);
+        }
     }
 }
 
@@ -766,7 +781,7 @@ padding: 5rem 0;
             left: 0;
             right: 0;
             top: 85%;
-            bottom: 0;
+            bottom: 80px;
             background-color:  #F0EFE9;
 
             @media (min-width: 576px) {
@@ -1195,7 +1210,7 @@ padding: 5rem 0;
                 gap: 20px;
                 
                
-                border: 1px solid hotpink;
+                
 
                 @media (min-width: 576px) and (max-width: 1200px) {
                     grid-area: footer-about;

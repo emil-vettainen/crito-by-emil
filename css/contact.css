@@ -70,46 +70,35 @@
 }
 
 .connect-form {
-  padding-top: 5rem;
+  padding-bottom: 6rem;
 }
 .connect-form .container {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 7rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   background-color: #f0efe9;
 }
-.connect-form .container input {
-  width: 100%;
+.connect-form .container .message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.connect-form .container .message-form input {
   padding: 1rem;
   border-radius: 25px;
   border: 1px solid #fff;
 }
-.connect-form .container textarea {
+.connect-form .container .message-form textarea {
   border-radius: 25px;
-  width: 100%;
   padding: 1rem;
   border-color: #fff;
 }
-.connect-form .container .button {
+.google-maps img {
+  min-height: 400px;
   width: 100%;
-}
-@media (min-width: 576px) {
-  .connect-form .container input, .connect-form .container textarea, .connect-form .container .button {
-    width: 80%;
-  }
-}
-@media (min-width: 768px) {
-  .connect-form .container input, .connect-form .container textarea, .connect-form .container .button {
-    width: 50%;
-  }
-}
-
-.google-maps {
-  padding: 12rem 0;
-  background-image: url(/images/google-maps.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
