@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crito - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
@@ -43,8 +43,8 @@
                 <div class="main-menu">
                     <nav>
                         <a class="active" href="index.html">Home</a>
-                        <a href="service.html">Service</a>
-                        <a href="news.html">News</a>
+                        <a href="#">Service</a>
+                        <a href="#">News</a>
                         <a href="contact.html">Contact</a>
                     </nav>
                     <a href="#">Login<i class="fa-regular fa-arrow-up-right"></i></a>
@@ -305,10 +305,10 @@
                 </div>
 
             </div>
-            
+
         </section>
 
-        <!-- <section class="team">
+        <section class="team">
             <div class="container">
 
                 <div class="team-txt">
@@ -319,43 +319,49 @@
 
                 <div class="team-grid">
 
-                    <div>
+                    <div class="team-card">
                         <img src="/images/team-members/kristine.jpg" alt="">
-                        <div>
+                        <div class="team-info">
                             <h4>Kristine Palmer</h4>
                             <p>Chef Operation Officer</p>
                         </div>
                     </div>
-                    <div>
+
+                    <div class="team-card">
                         <img src="/images/team-members/mark.jpg" alt="">
-                        <div>
+                        <div class="team-info">
                             <h4>Mark Aubri</h4>
                             <p>Senior Consultant</p>
                         </div>
                     </div>
-                    <div>
+
+                    <div class="team-card">
                         <img src="/images/team-members/kimberly.jpg" alt="">
-                        <div>
+                        <div class="team-info">
                             <h4>Kimberly Hansen</h4>
                             <p>Senior Consultant</p>
                         </div>
                     </div>
-                    <div>
+
+                    <div class="team-card">
                         <img src="/images/team-members/justin.jpg" alt="">
-                        <div>
+                        <div class="team-info">
                             <h4>Justin Willoman </h4>
                             <p>Senior Tech Consultant</p>
                         </div>
                     </div>
+
                 </div>
+
                 <div class="pagination">
                     <img src="/icons/dot(2).svg" alt="">
                 </div>
+
             </div>
-        </section> -->
+        </section>
 
 
-        <!-- <section class="testimonial">
+        <section class="testimonial">
             <div class="container">
                 <div class="testimonial-txt">
                     <h3>Testimonial</h3>
@@ -391,11 +397,11 @@
                         </div>
                         <div class="review-maker">
                             <div class="review-img">
-                                <img src="/images/testimonial/Cassandra.png" alt="">
+                                <img src="/images/testimonial/Amanda.png" alt="">
                             </div>
                             <div class="review-name">
-                                <h4>Cassandra Warren</h4>
-                                <p>Business Manager, Dorfus</p>
+                                <h4>Amanda Tulling</h4>
+                                <p>Senior Developer, Square</p>
                             </div>
                         </div>
                     </div>
@@ -409,11 +415,11 @@
                         </div>
                         <div class="review-maker">
                             <div class="review-img">
-                                <img src="/images/testimonial/Cassandra.png" alt="">
+                                <img src="/images/testimonial/Jack.png" alt="">
                             </div>
                             <div class="review-name">
-                                <h4>Cassandra Warren</h4>
-                                <p>Business Manager, Dorfus</p>
+                                <h4>Jack McDogglas</h4>
+                                <p>Key Account Manager, Gobana</p>
                             </div>
                         </div>
                     </div>
@@ -424,9 +430,9 @@
                     <a class="button" href="#">All Reviews<i class="fa-regular fa-arrow-up-right"></i></a>
                 </div>
             </div>
-        </section> -->
+        </section>
 
-        <!-- <section class="article-news">
+        <section class="article-news">
             <div class="container">
 
                 <div class="news-head">
@@ -436,10 +442,9 @@
                 </div>
 
                 <div class="article-news-grid">
-                    <div class="article-news-box">
-                        <div class="box-img">
-                            <img src="/images/article-news/Image1.jpg" alt="">
-                        </div>
+
+                    <div class="article-news-card">
+                        <img class="box-img" src="/images/article-news/Image1.jpg" alt="">
                         <div class="box-date">
                             <p><span>25</span><br>Mar</p>
                         </div>
@@ -450,10 +455,8 @@
                         </div>
                     </div>
 
-                    <div class="article-news-box">
-                        <div class="box-img">
-                            <img src="/images/article-news/Image2.jpg" alt="">
-                        </div>
+                    <div class="article-news-card">
+                        <img class="box-img" src="/images/article-news/Image2.jpg" alt="">
                         <div class="box-date">
                             <p><span>17</span><br>Mar</p>
                         </div>
@@ -464,10 +467,8 @@
                         </div>
                     </div>
 
-                    <div class="article-news-box">
-                        <div class="box-img">
-                            <img src="/images/article-news/Image3.jpg" alt="">
-                        </div>
+                    <div class="article-news-card">
+                        <img class="box-img" src="/images/article-news/Image3.jpg" alt="">
                         <div class="box-date">
                             <p><span>13</span><br>Mar</p>
                         </div>
@@ -477,15 +478,16 @@
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto sed hic libero.</p>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="pagination">
                     <img src="/icons/dot(1).svg" alt="the active page number is 1/5">
                 </div>
-            </div>
-        </section> -->
 
-        <!-- <section class="sign-up">
+            </div>
+        </section>
+
+        <section class="sign-up">
             <div class="container">
                 <h2>Get News Updates By Signup</h2>
                 <div class="sign-up-form">
@@ -494,9 +496,10 @@
                 </div>
             </div>
         </section>
-    </main> -->
 
-        <!-- <footer>
+    </main>
+
+    <footer>
         <section class="footer">
             <div class="container">
 
@@ -587,8 +590,8 @@
 
 
         </section>
-    </footer> -->
-        <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
+    </footer>
+    <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

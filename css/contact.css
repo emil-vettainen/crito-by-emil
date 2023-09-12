@@ -1,0 +1,32 @@
+main .connect .container .connect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+main .connect .container .connect-grid .connect-card {
+  display: flex;
+  gap: 20px;
+  padding: 2rem;
+  border: 1px solid hotpink;
+}
+main .connect .container .connect-grid .connect-card .connect-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  padding: 20px 22px;
+  border-radius: 50%;
+  background-color: red;
+}
+main .connect .container .connect-grid .connect-card i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+main .connect-form .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+main .connect-form .container input {
+  width: 50%;
+}

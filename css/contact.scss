@@ -1,0 +1,61 @@
+main {
+    .connect {
+        .container {
+            .connect-grid {
+
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+                .connect-card {
+                    display: flex;
+                    gap: 20px;
+                    padding: 2rem;
+                    border: 1px solid hotpink;
+
+                    .connect-icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        align-self: flex-start;
+                        padding: 20px 22px;
+                        border-radius: 50%;
+                        background-color: red;
+                    }
+                    
+
+                    i {
+                        font-size: 1.5rem;
+                        color: #fff;
+                        
+                    }
+
+                    .connect-info {
+                        h4 {
+                           
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    .connect-form {
+        .container {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            input {
+                width: 50%;
+                
+            }
+        }
+    }
+
+
+}
+
