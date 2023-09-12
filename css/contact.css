@@ -31,18 +31,23 @@
 .connect {
   padding: 6rem 0;
 }
-.connect .container .connect-grid {
+.connect .container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1fr);
   gap: 30px;
 }
-.connect .container .connect-grid .connect-card {
+@media (min-width: 992px) {
+  .connect .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.connect .container .connect-card {
   display: flex;
   gap: 20px;
-  padding: 2rem;
+  padding: 1rem;
   border: 1px solid #dad9d3;
 }
-.connect .container .connect-grid .connect-card .connect-icon {
+.connect .container .connect-card .connect-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,46 +56,60 @@
   border-radius: 50%;
   background-color: #191919;
 }
-.connect .container .connect-grid .connect-card i {
+.connect .container .connect-card i {
   font-size: 1.5rem;
   color: #fff;
 }
-.connect .container .connect-grid .connect-card .connect-info {
+.connect .container .connect-card .connect-info {
   display: flex;
   flex-direction: column;
 }
-.connect .container .connect-grid .connect-card .connect-info a {
+.connect .container .connect-card .connect-info a {
   text-decoration: none;
   color: inherit;
 }
 
 .connect-form {
-  padding: 0 0 6rem 0;
+  padding-top: 5rem;
 }
 .connect-form .container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   background-color: #f0efe9;
-  padding: 5rem 0;
 }
 .connect-form .container input {
-  width: 50%;
+  width: 100%;
   padding: 1rem;
   border-radius: 25px;
   border: 1px solid #fff;
 }
 .connect-form .container textarea {
   border-radius: 25px;
-  width: 50%;
+  width: 100%;
   padding: 1rem;
   border-color: #fff;
 }
 .connect-form .container .button {
-  width: 50%;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .connect-form .container input, .connect-form .container textarea, .connect-form .container .button {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .connect-form .container input, .connect-form .container textarea, .connect-form .container .button {
+    width: 50%;
+  }
 }
 
-.google-maps img {
-  width: 100%;
+.google-maps {
+  padding: 12rem 0;
+  background-image: url(/images/google-maps.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }

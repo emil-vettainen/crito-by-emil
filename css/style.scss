@@ -765,9 +765,13 @@ padding: 5rem 0;
             position: absolute;
             left: 0;
             right: 0;
-            top: 70%;
-            bottom: 80px;
+            top: 85%;
+            bottom: 0;
             background-color:  #F0EFE9;
+
+            @media (min-width: 576px) {
+                top: 70%;
+            }
 
             @media (min-width: 768px) {
                top: 60%;
@@ -946,8 +950,12 @@ padding: 5rem 0;
 
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr;
             column-gap: 20px;
+
+            @media (min-width: 992px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
             .review {
                 padding: 2rem 1rem;
                 background-color: #fff;
@@ -1164,71 +1172,75 @@ padding: 5rem 0;
     background-image: url(/images/footer-bg-effect.png);
     background-repeat: no-repeat;
     background-position: 100% 100%;
+    padding: 5rem 0;
 
     .container {
-        padding: 5rem 0;
-
-       .footer-grid {
+        
         display: grid;
-        grid-template-columns: 320px 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         column-gap: 80px;
-        
-        
+
+        @media (min-width: 576px) {
+            grid-template-areas:    'footer-about footer-about';
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: 1200px) {
+            grid-template-columns: 320px repeat(4, 1fr);
+        }
+
             .footer-about {
                 display: flex;
                 flex-flow: row wrap;
                 gap: 20px;
-                width: 320px;
                 
-                
+               
+                border: 1px solid hotpink;
 
+                @media (min-width: 576px) and (max-width: 1200px) {
+                    grid-area: footer-about;
+                }
+                
                 p {
                     color: #fff;
+                    
                 }
             }
 
            
 
-            .company, .help, .resources, .link {
-                h4 {
-                    color: #fff;
-                }
-                padding-top: 2.5rem;
-                
-                nav {
-                   
-                    margin-top: 40px;
-                   
-                    ul {
-                        list-style: none;
-                        padding: 0;
-
-                        li {
-
-                            margin-bottom: 20px;
-
-                            a {
-                                text-decoration: none;
-                                color: #fff;
-                                
-                            }
-                        }
-                        
-                    }
-
-                   
-                    
-                
-                }
+        .company, .help, .resources, .link {
+            h4 {
+                color: #fff;
             }
+            padding-top: 2.5rem;
+            
+            nav {
+                
+                margin-top: 40px;
+                
+                ul {
+                    list-style: none;
+                    padding: 0;
 
-       }
+                    li {
 
-       
+                        margin-bottom: 20px;
+
+                        a {
+                            text-decoration: none;
+                            color: #fff;
+                            
+                        }
+                    } 
+                }  
+            }
+        }
     }
+}    
 
    
-}
+
 
 .footer-bottom {
     border-top: 1px solid #dad9d3;
@@ -1236,12 +1248,20 @@ padding: 5rem 0;
     background-color: #0E1021;
     .container {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        gap: 20px;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         p {
             color: #fff;
             margin:0;
+            text-align: center;
         }
 
         a {
