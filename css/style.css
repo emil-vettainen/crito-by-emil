@@ -733,8 +733,17 @@ header .container .menu .main-menu > a:hover {
 
 .testimonial {
   padding-top: clamp(3rem, 2.36rem + 3.2vw, 5rem);
-  padding-bottom: 12rem;
   background-color: #F0D082;
+}
+@media (min-width: 576px) {
+  .testimonial {
+    padding-bottom: 6rem;
+  }
+}
+@media (min-width: 1400px) {
+  .testimonial {
+    padding-bottom: 12rem;
+  }
 }
 .testimonial .container {
   padding-top: 4rem;

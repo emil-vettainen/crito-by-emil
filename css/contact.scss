@@ -4,6 +4,7 @@
     background-image: url(/images/bg-effect.png);
     background-repeat: no-repeat;
     background-position: 0% 100%;
+
     .container {
         display: flex;
         flex-flow: row wrap;
@@ -18,13 +19,9 @@
             &.active {
                 font-weight: 500;
                 color: inherit;
+            }       
             }
-            
-           
-            
-            
-            
-        }
+
         h1 {
             color: #191919;
             font-family: 'DM Sans', sans-serif;
@@ -32,7 +29,6 @@
             font-size: 3.5rem;
             width: 100%;
             text-align: center;
-            
             
         }
     }
@@ -88,8 +84,9 @@
 }
 
 .connect-form {
-   
+   @media (min-width: 576px) {
     padding-bottom: 6rem;
+   }
     .container {
         padding-top: 7rem;
         padding-bottom: 5rem;
@@ -105,60 +102,25 @@
             gap: 20px;
 
             input {
-           
                 padding: 1rem;
                 border-radius: 25px;
-                
-                
                 border: 1px solid #fff;
-    
-                
+            
             }
     
             textarea {
                 border-radius: 25px;
-                
                 padding: 1rem;
                 border-color: #fff;
             }
             .button {
                 
             }
-
         }
-        
-
-        
-        
-        // @media (min-width: 576px) {
-        //     input, textarea, .button {
-        //         width: 80%;
-        //     }
-
-            
-        // }
-
-        // @media (min-width: 768px) {
-        //     input, textarea, .button {
-        //         width: 50%;
-        //     }
-
-            
-        // }
     }
 }
 
 .google-maps {
-    // padding: 12rem 0;
-    // background-image: url(/images/google-maps.jpg);
-    // background-repeat: no-repeat;
-    // background-position: 50% 50%;
-
-    // @media (min-width: 576px) {
-
-    // }
-        
-
 
     img {
         
@@ -167,6 +129,4 @@
        object-fit: cover;
         
     }
-    
 }
-

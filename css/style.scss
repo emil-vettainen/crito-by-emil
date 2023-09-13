@@ -204,8 +204,6 @@ header {
         padding-bottom: 2rem;
     }        
     
-    
-
         @media (min-width: 1200px) {
             padding-bottom: 0;
         }
@@ -841,8 +839,16 @@ header {
 
 .testimonial {
     padding-top: clamp(3rem, 2.3600rem + 3.2000vw, 5rem);
-    padding-bottom: 12rem;
+    
     background-color: #F0D082;
+
+    @media (min-width: 576px) {
+        padding-bottom: 6rem;
+    }
+
+    @media (min-width: 1400px) {
+        padding-bottom: 12rem;
+    }
     .container {
         padding-top: 4rem;
         padding-bottom: 3rem;
@@ -850,9 +856,6 @@ header {
         @media (min-width: 1400px) {
             outline: 70px solid #fff;
         }
-      
-        
-        
         
         background-color: #fff;
         .testimonial-txt {
@@ -938,7 +941,6 @@ header {
 
     .container {
         
-
         .news-head {
             display: flex;
             flex-flow: row wrap;
@@ -1185,6 +1187,5 @@ header {
             font-size: 1.2rem;
             margin-left: 10px;
         }
-       
     }
 }

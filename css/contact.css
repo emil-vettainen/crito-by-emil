@@ -69,8 +69,10 @@
   color: inherit;
 }
 
-.connect-form {
-  padding-bottom: 6rem;
+@media (min-width: 576px) {
+  .connect-form {
+    padding-bottom: 6rem;
+  }
 }
 .connect-form .container {
   padding-top: 7rem;
