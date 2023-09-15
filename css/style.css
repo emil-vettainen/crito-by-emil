@@ -62,11 +62,6 @@ h4 {
   display: inline-flex;
 }
 
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
 header {
   background-color: #f0efe9;
   padding: 1rem 0;
@@ -205,6 +200,11 @@ header .container .menu .main-menu > a:hover {
   align-content: center;
   gap: 1rem;
 }
+@media (min-width: 1400px) {
+  .hero .hero-info {
+    margin-bottom: 40px;
+  }
+}
 .hero .hero-info h1 {
   font-size: clamp(2.5rem, 1.5891rem + 4.5545vw, 5.375rem);
   text-transform: capitalize;
@@ -319,32 +319,28 @@ header .container .menu .main-menu > a:hover {
   margin-bottom: 30px;
 }
 
-.about {
-  padding-top: clamp(3rem, 2.36rem + 3.2vw, 5rem);
-  padding-bottom: clamp(3rem, 2.36rem + 3.2vw, 5rem);
+.about-company {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
 }
-.about .container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.about-company .container {
+  display: grid;
+  grid-template-columns: auto 530px;
+  justify-content: space-between;
 }
-@media (min-width: 992px) {
-  .about .container {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 60px;
-  }
-}
-.about .container .about-img {
+.about-company .container .about-img {
   position: relative;
 }
 @media (min-width: 1200px) {
-  .about .container .about-img {
+  .about-company .container .about-img {
     padding-left: 4rem;
   }
 }
+.about-company .container .about-img img {
+  max-width: 100%;
+}
 @media (max-width: 992px) {
-  .about .container .about-img img {
+  .about-company .container .about-img img {
     max-height: 400px;
     -o-object-fit: cover;
        object-fit: cover;
@@ -353,80 +349,78 @@ header .container .menu .main-menu > a:hover {
   }
 }
 @media (max-width: 1200px) {
-  .about .container .about-img img {
+  .about-company .container .about-img img {
     width: 100%;
   }
 }
-.about .container .about-img .bg-svg {
+.about-company .container .about-img .bg-svg {
   position: absolute;
   top: 25px;
   left: 25px;
 }
-.about .container .about-img div {
+.about-company .container .about-img .img-info {
   background-color: #BEEBFF;
   padding: 2rem;
 }
 @media (min-width: 1200px) {
-  .about .container .about-img div {
+  .about-company .container .about-img .img-info {
     position: absolute;
     left: 0;
-    bottom: 3rem;
+    bottom: 60px;
   }
 }
-.about .container .about-img div h4, .about .container .about-img div span {
+.about-company .container .about-img .img-info h4, .about-company .container .about-img .img-info span {
   font-weight: 700;
   font-family: "DM Sans", sans-serif;
   font-size: 1.25rem;
   text-transform: capitalize;
 }
-.about .container .about-img div h4 span, .about .container .about-img div span span {
+.about-company .container .about-img .img-info h4 span, .about-company .container .about-img .img-info span span {
   color: #F94D1C;
   font-size: 1rem;
 }
-.about .container .about-img div h4 p, .about .container .about-img div span p {
+.about-company .container .about-img .img-info h4 p, .about-company .container .about-img .img-info span p {
   font-weight: 500;
   font-style: italic;
 }
-.about .container .about-info {
+.about-company .container .about-info {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-@media (min-width: 1200px) {
-  .about .container .about-info {
-    padding: 0 1rem;
-  }
+.about-company .container .about-info p {
+  margin: 0;
 }
-.about .container .about-info .about-buttons {
+.about-company .container .about-info .about-buttons {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-top: 40px;
 }
 @media (min-width: 576px) {
-  .about .container .about-info .about-buttons {
+  .about-company .container .about-info .about-buttons {
     flex-direction: row;
     justify-content: start;
     gap: 40px;
   }
 }
 @media (min-width: 992px) {
-  .about .container .about-info .about-buttons {
+  .about-company .container .about-info .about-buttons {
     justify-content: start;
   }
 }
-.about .container .about-info .about-buttons .button {
+.about-company .container .about-info .about-buttons .button {
   background-color: #191919;
   border-color: #191919;
   color: #fff;
   padding: 12px 24px;
 }
 @media (max-width: 576px) {
-  .about .container .about-info .about-buttons .button {
+  .about-company .container .about-info .about-buttons .button {
     flex-grow: 1;
   }
 }
-.about .container .about-info .about-buttons .play {
+.about-company .container .about-info .about-buttons .play {
   font-weight: 600;
   font-size: 1rem;
   display: flex;
@@ -437,23 +431,27 @@ header .container .menu .main-menu > a:hover {
   align-self: center;
   flex-grow: 1;
 }
-.about .container .about-info .about-buttons .play i {
+.about-company .container .about-info .about-buttons .play i {
   font-size: 45px;
   margin-right: 10px;
 }
-.about .container .about-info .about-buttons .play:hover {
+.about-company .container .about-info .about-buttons .play:hover {
   transform: scale(0.9);
 }
 @media (min-width: 992px) {
-  .about .container .about-info .about-buttons .button, .about .container .about-info .about-buttons .play {
+  .about-company .container .about-info .about-buttons .button, .about-company .container .about-info .about-buttons .play {
     margin-top: 40px;
   }
 }
 
 .our-services {
   background-color: #F0EFE9;
-  padding-top: clamp(3rem, 2.36rem + 3.2vw, 5rem);
-  padding-bottom: clamp(3rem, 2.36rem + 3.2vw, 5rem);
+}
+@media (min-width: 1400px) {
+  .our-services {
+    padding-top: 5.625rem;
+    padding-bottom: 7.5rem;
+  }
 }
 @media (min-width: 768px) {
   .our-services .container h2 {
@@ -476,7 +474,7 @@ header .container .menu .main-menu > a:hover {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.our-services .container .service-box-grid .service-box {
+.our-services .container .service-box-grid .service-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -484,17 +482,14 @@ header .container .menu .main-menu > a:hover {
   background-color: #fff;
   transition: background-color 0.2s ease-in-out;
 }
-.our-services .container .service-box-grid .service-box img {
-  margin-bottom: 40px;
-}
-.our-services .container .service-box-grid .service-box h4 {
+.our-services .container .service-box-grid .service-card h4 {
   color: #191919;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
   font-size: 1.375rem;
   text-transform: capitalize;
 }
-.our-services .container .service-box-grid .service-box h4::before {
+.our-services .container .service-box-grid .service-card h4::before {
   content: "";
   display: block;
   width: 40px;
@@ -502,10 +497,10 @@ header .container .menu .main-menu > a:hover {
   background-color: #191919;
   margin-bottom: 40px;
 }
-.our-services .container .service-box-grid .service-box p {
+.our-services .container .service-box-grid .service-card p {
   flex-grow: 1;
 }
-.our-services .container .service-box-grid .service-box i {
+.our-services .container .service-box-grid .service-card i {
   border: 1px solid #191919;
   background-color: #191919;
   color: #fff;
@@ -515,26 +510,26 @@ header .container .menu .main-menu > a:hover {
   align-self: flex-end;
   transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
-.our-services .container .service-box-grid .service-box:hover {
+.our-services .container .service-box-grid .service-card:hover {
   background-color: #F9D783;
 }
-.our-services .container .service-box-grid .service-box:hover i {
+.our-services .container .service-box-grid .service-card:hover i {
   background-color: #fff;
   border-color: #fff;
   color: #191919;
 }
-.our-services .container .btn-our-services {
+.our-services .container .btn-browse-services {
   display: flex;
   justify-content: center;
 }
-.our-services .container .btn-our-services a {
+.our-services .container .btn-browse-services a {
   background-color: transparent;
   border-color: #191919;
   padding: 12px 30px;
   flex-grow: 1;
 }
 @media (min-width: 576px) {
-  .our-services .container .btn-our-services a {
+  .our-services .container .btn-browse-services a {
     flex-grow: 0;
   }
 }
