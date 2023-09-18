@@ -1,5 +1,6 @@
 .hero-connect {
-  padding: 5rem 0;
+  padding-top: clamp(3rem, 2.0714rem + 4.6429vw, 6.25rem);
+  padding-bottom: clamp(3rem, 2.0714rem + 4.6429vw, 6.25rem);
   background-color: #f0efe9;
   background-image: url(/images/bg-effect.png);
   background-repeat: no-repeat;
@@ -19,6 +20,9 @@
   font-weight: 500;
   color: inherit;
 }
+.hero-connect .container a:hover {
+  text-decoration: underline;
+}
 .hero-connect .container h1 {
   color: #191919;
   font-family: "DM Sans", sans-serif;
@@ -29,7 +33,8 @@
 }
 
 .connect {
-  padding: 6rem 0;
+  padding-top: clamp(3rem, 2.0714rem + 4.6429vw, 6.25rem);
+  padding-bottom: clamp(2rem, 1.1429rem + 4.2857vw, 5rem);
 }
 .connect .container {
   display: grid;
@@ -68,15 +73,18 @@
   text-decoration: none;
   color: inherit;
 }
+.connect .container .connect-card .connect-info a:hover {
+  text-decoration: underline;
+}
 
 @media (min-width: 576px) {
   .connect-form {
-    padding-bottom: 6rem;
+    padding-bottom: clamp(0rem, -2.1429rem + 10.7143vw, 7.5rem);
   }
 }
 .connect-form .container {
-  padding-top: 7rem;
-  padding-bottom: 5rem;
+  padding-top: clamp(3rem, 1.7143rem + 6.4286vw, 7.5rem);
+  padding-bottom: clamp(3rem, 2.0714rem + 4.6429vw, 6.25rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,6 +106,10 @@
   padding: 1rem;
   border-color: #fff;
 }
+.connect-form .container .message-form .button {
+  padding: 12px 30px;
+}
+
 .google-maps img {
   min-height: 400px;
   width: 100%;

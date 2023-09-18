@@ -1,5 +1,6 @@
 .hero-connect {
-    padding: 5rem 0;
+    padding-top: clamp(3rem, 2.0714rem + 4.6429vw, 6.25rem);
+    padding-bottom: clamp(3rem, 2.0714rem + 4.6429vw, 6.25rem);
     background-color: #f0efe9;
     background-image: url(/images/bg-effect.png);
     background-repeat: no-repeat;
@@ -15,12 +16,15 @@
             text-decoration: none;
             color: inherit;
 
-
             &.active {
                 font-weight: 500;
                 color: inherit;
-            }       
+            } 
+            
+            &:hover {
+                text-decoration: underline;
             }
+        }
 
         h1 {
             color: #191919;
@@ -36,7 +40,8 @@
 
 
 .connect {
-    padding: 6rem 0;
+    padding-top: clamp(3rem, 2.0714rem + 4.6429vw, 6.25rem);
+    padding-bottom: clamp(2rem, 1.1429rem + 4.2857vw, 5rem);
 
     .container {
         display: grid;
@@ -62,12 +67,10 @@
                 border-radius: 50%;
                 background-color: #191919;
             }
-            
 
             i {
                 font-size: 1.5rem;
                 color: #fff;
-                
             }
 
             .connect-info {
@@ -77,6 +80,11 @@
                 a {
                     text-decoration: none;
                     color: inherit;
+
+                    &:hover {
+                        text-decoration: underline;
+
+                    }
                 }
             }
         }
@@ -84,12 +92,13 @@
 }
 
 .connect-form {
+
    @media (min-width: 576px) {
-    padding-bottom: 6rem;
+    padding-bottom: clamp(0rem, -2.1429rem + 10.7143vw, 7.5rem);
    }
     .container {
-        padding-top: 7rem;
-        padding-bottom: 5rem;
+        padding-top: clamp(3rem, 1.7143rem + 6.4286vw, 7.5rem);
+        padding-bottom: clamp(3rem, 2.0714rem + 4.6429vw, 6.25rem);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -105,7 +114,6 @@
                 padding: 1rem;
                 border-radius: 25px;
                 border: 1px solid #fff;
-            
             }
     
             textarea {
@@ -114,19 +122,16 @@
                 border-color: #fff;
             }
             .button {
-                
+                padding: 12px 30px;
             }
         }
     }
 }
 
 .google-maps {
-
     img {
-        
        min-height: 400px;
        width: 100%;
        object-fit: cover;
-        
     }
 }
