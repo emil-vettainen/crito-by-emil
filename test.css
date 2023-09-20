@@ -1,45 +1,21 @@
-.features {
-  border: 1px solid red;
-  padding-top: clamp(3rem, 2.36rem + 3.2vw, 5rem);
-  padding-bottom: clamp(3rem, 2.36rem + 3.2vw, 5rem);
+.full-width-split-screen {
+  display: grid;
+  grid-template-columns: 1fr 620px 620px 1fr;
 }
-.features .container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  gap: 40px;
+.full-width-split-screen .us-info {
+  grid-column: 2/3;
+  margin-right: 200px;
 }
-@media (min-width: 992px) {
-  .features .container {
-    flex-flow: row wrap;
-    gap: 0px;
-  }
+.full-width-split-screen .us-img {
+  position: relative;
+  margin-left: 100px;
+  grid-column: 3/-1;
 }
-.features .container .features-info {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: start;
-  gap: 20px;
-}
-.features .container .features-info .button {
+.full-width-split-screen .us-img .bg-clr-effect {
+  background-color: black;
+  height: 420px;
   width: 100%;
-  padding: 12px 30px;
-  margin-top: 1rem;
-}
-.features .container .features-box {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-}
-.features .container .features-box div {
-  display: flex;
-  flex-flow: column;
-  align-items: start;
-  padding: 1.7rem 1rem;
-}
-.features .container .features-box div p {
-  color: 500000E5E;
-}
-.features .container .features-box div img {
-  margin-bottom: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

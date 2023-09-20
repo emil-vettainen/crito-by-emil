@@ -68,51 +68,54 @@
 
         <section class="business-logo">
             <div class="container">
-                <img src="/icons/paperz.svg" alt=" Paperz-logo">
-                <img src="/icons/dorfus.svg" alt=" Dorfus-logo">
-                <img src="/icons/martino.svg" alt="Martino-logo">
-                <img src="/icons/square.svg" alt="Square-logo">
-                <img src="/icons/gobana.svg" alt="Goban-logo">
+                <div class="wrapper">
+                    <img src="/icons/paperz.svg" alt=" Paperz logo">
+                    <img src="/icons/dorfus.svg" alt=" Dorfus logo">
+                    <img src="/icons/martino.svg" alt="Martino logo">
+                    <img src="/icons/square.svg" alt="Square logo">
+                    <img src="/icons/gobana.svg" alt="Goban logo">
+                </div>
             </div>
         </section>
 
         <section class="features">
 
+            <div class="border-around">
+                <div class="container">
 
-            <div class="container">
-
-                <div class="features-info">
-                    <h3>features</h3>
-                    <h2>Our Accounting is trusted by thousand of companies</h2>
-                    <a class="button" href="#">learn more<i class="fa-regular fa-arrow-up-right"></i></a>
-                </div>
-
-                <div class="features-grid">
-
-                    <div class="features-card">
-                        <img src="/icons/b-advice.svg" alt="Illustration of handshake">
-                        <h4>Business Advice</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <div class="features-info">
+                        <h3>features</h3>
+                        <h2>Our Accounting is trusted by thousand of companies</h2>
+                        <a class="button" href="#">learn more<i class="fa-regular fa-arrow-up-right"></i></a>
                     </div>
 
-                    <div class="features-card">
-                        <img src="/icons/startup-b.svg" alt="Illustration of light bulb">
-                        <h4>Startup Business</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
+                    <div class="features-grid">
 
-                    <div class="features-card">
-                        <img src="/icons/f-advice.svg" alt="Illustration of diagram">
-                        <h4>Financial Advice</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
+                        <div class="features-card">
+                            <img src="/icons/b-advice.svg" alt="Illustration of handshake">
+                            <h4>Business Advice</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
 
-                    <div class="features-card">
-                        <img src="/icons/risk-m.svg" alt="Illustration of box with gear">
-                        <h4>Risk Managemnt</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
+                        <div class="features-card">
+                            <img src="/icons/startup-b.svg" alt="Illustration of light bulb">
+                            <h4>Startup Business</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
 
+                        <div class="features-card">
+                            <img src="/icons/f-advice.svg" alt="Illustration of diagram">
+                            <h4>Financial Advice</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
+
+                        <div class="features-card">
+                            <img src="/icons/risk-m.svg" alt="Illustration of box with gear">
+                            <h4>Risk Managemnt</h4>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -123,7 +126,6 @@
 
                 <div class="about-img">
                     <img src="/images/about.jpg" alt="Picture of Samantha walking in the company hallway">
-                    <img class="bg-img-effect" src="/icons/EWlement.svg" alt="">
                     <div class="img-info">
                         <h4>Samantha Brown, <span>Founder</span></h4>
                         <p>"Lorem ipsum dolor sit amet consectetur<br>adipisicing elit."</p>
@@ -200,6 +202,8 @@
         <section class="why-us">
             <div class="container">
 
+                
+
                 <div class="us-info col-12 col-lg-6 col-xl-5 col-xxl-4">
                     <h3>why choose us</h3>
                     <h2>Why we are the best business consulting agency</h2>
@@ -239,12 +243,14 @@
 
                     </div>
                 </div>
-                <div class="us-img col-12 col-lg-6 col-xl-6 ">
+                <div class="us-img  ">
                     <img src="/images/why-choose-us.jpg"
                         alt="Picture of two colleagues conversing in a conference room">
-
+                        <!-- <div class="bg-clr-effect"></div> -->
                 </div>
-                <!-- <span></span> -->
+                
+               
+                
             </div>
             </div>
         </section>
@@ -371,8 +377,8 @@
         </section>
 
         <section class="testimonial">
-            <div class="ram">
-                <div class="container test">
+            <div class="ram-left-right">
+                <div class="container">
                     <div class="testimonial-txt">
                         <h3>Testimonial</h3>
                         <h2>What Our Clients Says</h2>
@@ -521,7 +527,7 @@
     </main>
     <footer>
         <section class="footer">
-            <div class="container">
+            <div class="container" aria-label="footer">
 
                 <div class="footer-about">
                     <img src="/icons/Logo-footer.svg" alt="Crito-logo">
@@ -530,7 +536,7 @@
                         Voluptates laborum nam ratione minus necessitatibus, iure praesentium.</p>
                 </div>
                 <div class="company">
-                    <h4>Company</h4>
+                    <h2>Company</h2>
                     <nav>
                         <ul>
                             <li><a href="#">About</a></li>
@@ -541,7 +547,7 @@
                     </nav>
                 </div>
                 <div class="help">
-                    <h4>Help</h4>
+                    <h2>Help</h2>
                     <nav>
                         <ul>
                             <li><a href="#">Customer Support</a></li>
@@ -552,7 +558,7 @@
                     </nav>
                 </div>
                 <div class="resources">
-                    <h4>Resources</h4>
+                    <h2>Resources</h2>
                     <nav>
                         <ul>
                             <li><a href="#">Free eBooks</a></li>
@@ -563,7 +569,7 @@
                     </nav>
                 </div>
                 <div class="link">
-                    <h4>Link</h4>
+                    <h2>Link</h2>
                     <nav>
                         <ul>
                             <li><a href="#">Free eBooks</a></li>

@@ -49,7 +49,7 @@
 .connect .container .connect-card {
   display: flex;
   gap: 20px;
-  padding: 1rem;
+  padding: 3rem;
   border: 1px solid #dad9d3;
 }
 .connect .container .connect-card .connect-icon {
