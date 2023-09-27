@@ -12,14 +12,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/mobile-nav.js" defer></script>
+    <script defer src="/mobile-nav.js"></script>
 </head>
 
 <body>
     <header>
         <div class="container">
             <a href="/"><img src="/icons/Logo-header.svg" alt="Crito-logo"></a>
-           
             <div class="menu">
                 <div class="top-menu">
                     <div class="contact">
@@ -42,22 +41,24 @@
                 </div>
                 <div class="main-menu">
 
+                    <!--Mobile-nav-toggle = insperatin från flera källor, där jag sedan plocka ut de intressanta bitarna och justerade efter mitt behov.
+                        Koden är även delad i klassens discord grupp ifall någon ville använda samma funktion. -->
                     <label class="mobile-nav-toggle">
-                        <input class="checkbox" type="checkbox">
+                        <input type="checkbox" id="checkbox" class="checkbox">
                     </label>
-
                     <nav class="primary-navigation" data-visible="false">
                         <ul aria-label="primary-navigation">
-                            <li><a class="active underline" href="">Home</a></li>
+                            <li><a class="active underline" href="/index.html">Home</a></li>
                             <li><a class="underline" href="">Service</a></li>
-                            <li><a class="underline" href="">News</a></li>
+                            <li><a class="underline" href="/news-articles.html">News</a></li>
                             <li><a class="underline" href="/contact.html">Contact</a></li>
                         </ul>
+                    <!--/-->
+
                         <div class="login-button">
                             <a href="#">Login<i class="fa-regular fa-arrow-up-right"></i></a>
                         </div>
                     </nav>
-
                 </div>
             </div>
         </div>
@@ -75,9 +76,10 @@
             </div>
         </section>
 
+        <!-- Här valde jag en div istället för section då innehållet saknar h2-h6 -->
         <div class="business-logo">
             <div class="container">
-                <div class="wrapper">
+                <div class="business-logo-grid">
                     <img src="/icons/paperz.svg" alt=" Paperz logo">
                     <img src="/icons/dorfus.svg" alt=" Dorfus logo">
                     <img src="/icons/martino.svg" alt="Martino logo">
@@ -88,15 +90,14 @@
         </div>
 
         <section class="features">
-
             <div class="border-around">
                 <div class="container">
 
-                    <div class="features-info">
+                    <article class="features-info">
                         <h3>features</h3>
                         <h2>Our Accounting is trusted by thousand of companies</h2>
                         <a class="button" href="#">learn more<i class="fa-regular fa-arrow-up-right"></i></a>
-                    </div>
+                    </article>
 
                     <div class="features-grid">
 
@@ -211,12 +212,10 @@
         <section class="why-us">
             <div class="container">
 
-                
-
                 <div class="us-info col-12 col-lg-6 col-xl-5 col-xxl-4">
                     <h3>why choose us</h3>
                     <h2>Why we are the best business consulting agency</h2>
-
+                    
                     <div class="us-icon-grid">
                         <div class="us-icon-info">
                             <img src="/icons/process.svg" alt="Illustration of thumbs up.">
@@ -255,7 +254,6 @@
                 <div class="us-img  ">
                     <img src="/images/why-choose-us.jpg"
                         alt="Picture of two colleagues conversing in a conference room">
-                        <!-- <div class="bg-clr-effect"></div> -->
                 </div>
                 
                
@@ -271,8 +269,6 @@
                     <h3>Project & Case Studies</h3>
                     <h2>Let's Looks Our Global Projects</h2>
                 </div>
-
-
 
                 <div class="project-case-grid">
 
@@ -373,13 +369,12 @@
                     </div>
                 </div>
                 <div class="pagination">
-
                     <ul class="dots">
-                        <li><a href="#"></a></li>
-                        <li class="active"><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
+                        <li></li>
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
                     </ul>
                 </div>
             </div>
@@ -526,10 +521,10 @@
         <section class="sign-up">
             <div class="container">
                 <h2>Get News Updates By Signup</h2>
-                <div class="sign-up-form">
-                    <input type="email" required placeholder="username@domain.com">
-                    <button class="button" type="submit">Subscribe<i class="fa-regular fa-arrow-up-right"></i></button>
-                </div>
+                <form method="post" id="sign-up-form" class="sign-up-form">
+                    <input type="email" id="email" name="email" autocomplete="1" required placeholder="username@domain.com">
+                    <button type="submit" id="submit" class="button" >Subscribe<i class="fa-regular fa-arrow-up-right"></i></button>
+                </form>
             </div>
         </section>
 
@@ -537,7 +532,6 @@
     <footer>
         <section class="footer">
             <div class="container">
-
                 <div class="footer-about">
                     <img src="/icons/Logo-footer.svg" alt="Crito-logo">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat obcaecati voluptas
@@ -588,21 +582,15 @@
                         </ul>
                     </nav>
                 </div>
-
-
-
             </div>
-
-
-
-            
         </section>
 
+        <!-- Även här valde jag en div istället för section då innehållet saknar h2-h6 -->
         <div class="footer-bottom">
             <div class="container">
 
                 <p>&copy; 2023 Crito - Consulting Company Inc. All Rights Reserved.</p>
-
+                <!-- Provade att tillämpa aria-label, efter att läst lite om det för tillgänglighet -->
                 <ul aria-label="social links" class="social-links">
                     <li><a aria-label="facebook" href=""><i class="fa-brands fa-facebook"></i></a></li>
                     <li><a aria-label="twitter" href=""><i class="fa-brands fa-twitter"></i></a></li>

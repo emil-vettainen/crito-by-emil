@@ -7,13 +7,15 @@
     <meta name="description" content="We provide the best business solutions">
     <meta name="keywords" content="business advice, startup business, financial advice, risk management">
     <meta name="author" content="Emil Vettainen">
-    <title>Crito-Business solutions</title>
+    <title>Crito - Business solutions</title>
+    <link rel="icon" href="/icons/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/contact.css">
-    <script src="/mobile-nav.js" defer></script>
-    
+    <script defer src="/mobile-nav.js"></script>
+    <script defer src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -22,7 +24,7 @@
     <header>
         <div class="container">
             <a href="/"><img src="/icons/Logo-header.svg" alt="Crito-logo"></a>
-           
+
             <div class="menu">
                 <div class="top-menu">
                     <div class="contact">
@@ -46,14 +48,14 @@
                 <div class="main-menu">
 
                     <label class="mobile-nav-toggle">
-                        <input class="checkbox" type="checkbox">
+                        <input class="checkbox" type="checkbox" id="checkbox">
                     </label>
 
                     <nav class="primary-navigation" data-visible="false">
                         <ul aria-label="primary-navigation">
                             <li><a class="underline" href="/index.html">Home</a></li>
                             <li><a class="underline" href="">Service</a></li>
-                            <li><a class="underline" href="">News</a></li>
+                            <li><a class="underline" href="/news-articles.html">News</a></li>
                             <li><a class="active underline" href="/contact.html">Contact</a></li>
                         </ul>
                         <div class="login-button">
@@ -97,7 +99,7 @@
                         <a href="#">+48 (8) 121 470 50</a>
                     </div>
                 </div>
-                
+
                 <div class="connect-card">
                     <div class="connect-icon">
                         <i class="fa-solid fa-envelope"></i>
@@ -117,13 +119,13 @@
             <div class="container">
                 <h2>Leave us a message<br>for any information.</h2>
 
-                <div class="message-form col-12 col-sm-9 col-lg-10">
-                    <input type="text" placeholder="Name*">
-                    <input type="email" placeholder="Email*">
-                    <textarea name="Your Message*" cols="30" rows="6"
-                        placeholder="Your Message*"></textarea>
-                    <button class="button" type="submit">Send Message<i class="fa-regular fa-arrow-up-right"></i></button>
-                </div>
+                <form method="post" id="message-form" class="message-form col-12 col-sm-9 col-lg-10">
+                    <input type="text" id="name" name="name" autocomplete="1" required placeholder="Name*">
+                    <input type="email" id="email" name="email" autocomplete="1" required placeholder="Email*">
+                    <textarea id="message" name="message" placeholder="Your Message*"></textarea>
+                    <button type="submit" id="submit" class="button">Send Message<i
+                            class="fa-regular fa-arrow-up-right"></i></button>
+                </form>
 
             </div>
         </section>
@@ -136,7 +138,6 @@
     <footer>
         <section class="footer">
             <div class="container">
-
                 <div class="footer-about">
                     <img src="/icons/Logo-footer.svg" alt="Crito-logo">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat obcaecati voluptas
@@ -187,21 +188,15 @@
                         </ul>
                     </nav>
                 </div>
-
-
-
             </div>
-
-
-
-            
         </section>
 
+        <!-- Även här valde jag en div istället för section då innehållet saknar h2-h6 -->
         <div class="footer-bottom">
             <div class="container">
 
                 <p>&copy; 2023 Crito - Consulting Company Inc. All Rights Reserved.</p>
-
+                <!-- Provade att tillämpa aria-label, efter att läst lite om det för tillgänglighet -->
                 <ul aria-label="social links" class="social-links">
                     <li><a aria-label="facebook" href=""><i class="fa-brands fa-facebook"></i></a></li>
                     <li><a aria-label="twitter" href=""><i class="fa-brands fa-twitter"></i></a></li>
@@ -212,10 +207,10 @@
             </div>
         </div>
 
-    </footer>  
+    </footer>
 
 
-    <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

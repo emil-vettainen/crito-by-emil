@@ -1,17 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-
 html, body{
     color: #191919;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
-
 }
-
-
-
-
 
 // body {
 //     display: flex;
@@ -50,6 +44,7 @@ h2 {
     font-size: clamp(2rem, 1.7465rem + 1.2673vw, 2.8rem);
     text-transform: capitalize;
     margin: 0;
+    text-wrap: balance;
 }
 
 h3 {
@@ -58,6 +53,7 @@ h3 {
     text-transform: capitalize;
     font-weight: 500;
     margin: 0;
+    text-wrap: balance;
 }
 
 h4 {
@@ -66,6 +62,7 @@ h4 {
     font-size: 1.375rem;
     color: #191919;
     margin: 0;
+    text-wrap: balance;
 }
 
 .clickable {
@@ -108,7 +105,6 @@ ol[role='list'] {
             cursor: pointer;
             transition: background-color .3s ease-in-out;
             
-
             &.active {
                 background-color: #191919;
             }
@@ -119,7 +115,6 @@ ol[role='list'] {
         }
     }
 }
-
 
 header {
     background-color: #f0efe9;
@@ -209,8 +204,6 @@ header {
                 align-items: center;
                 padding-top: .5rem;
                 
-
-                
                 .mobile-nav-toggle {
                     z-index: 9999;
                     display: flex;
@@ -218,9 +211,6 @@ header {
                     gap: 5px;
                     cursor: pointer;
                     
-                    
-                    
-
                     &::before,
                     &::after,
                     >input {
@@ -241,8 +231,6 @@ header {
                             opacity: 0;
                             width: 0;
                         }
-
-                        
                     }
 
                     &:has(input:checked)::before {
@@ -260,12 +248,8 @@ header {
                     @media (min-width: 992px) {
                         display: none;
                     }
-
-
-
                 }
                 
-               
                 .primary-navigation {
                     display: flex;
                     justify-content: space-between;
@@ -311,14 +295,10 @@ header {
                         text-decoration: none;
                         position: relative;
                         
-                        
-
-
                         @media (min-width: 992px) {
                             margin-right: 1.3rem;
                         }
 
-                        
                         &.active {
                             font-weight: 500;
                         }
@@ -339,8 +319,6 @@ header {
 
                 .login-button {
 
-                    
-
                     a{
                         padding: 10px 30px;
                         background-color: #F9D783;
@@ -355,9 +333,7 @@ header {
     
                         i{
                             margin-left: 8px;
-                            font-size: 0.9em;
-    
-                            
+                            font-size: 0.9em; 
                         }
                         
                         &:hover{
@@ -372,7 +348,7 @@ header {
    
 .hero {
     background-color: #f0efe9;
-    background-image: url(/images/bg-effect.png);
+    background-image: url(/images/bg-effects/bg-showcase.svg);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     
@@ -381,14 +357,14 @@ header {
         padding-bottom: 3rem;
     }        
     
-        .container {
-            display: flex;
-            gap:20px;
+    .container {
+        display: flex;
+        gap:20px;
 
-            @media (max-width: 992px) {
-                flex-direction: column-reverse;
-            }
+        @media (max-width: 992px) {
+            flex-direction: column-reverse;
         }
+    }
 
     .hero-info {
         display: flex;
@@ -443,7 +419,7 @@ header {
 
     .container {
 
-        .wrapper {
+        .business-logo-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 60px;
@@ -483,7 +459,7 @@ header {
         justify-content: space-between;
         gap: 40px;
         padding-top: clamp(3rem, 2.4286rem + 2.8571vw, 5rem);
-        padding-bottom: clamp(2rem, 1.1429rem + 4.2857vw, 5rem);
+        padding-bottom: clamp(1rem, -1.7961rem + 7.767vw, 5rem);
         
         
         @media (min-width: 992px) {
@@ -537,7 +513,7 @@ header {
 }
 
 .about-company {
-    padding-top: clamp(3rem, 1.4155rem + 6.7606vw, 7.5rem);
+    padding-top: clamp(2rem, -1.8447rem + 10.6796vw, 7.5rem);
     padding-bottom: clamp(3.5rem, 2.0915rem + 6.0094vw, 7.5rem);
   
     .container{
@@ -661,7 +637,7 @@ header {
     padding-top: clamp(3.5rem, 2.7518rem + 3.1925vw, 5.625rem);
     padding-bottom: clamp(3.5rem, 2.0915rem + 6.0094vw, 7.5rem);
     background-color: #F0EFE9;
-    background-image: url(/images/Rectangle\ 607.svg);
+    background-image: url(/images/bg-effects/bg-our-services.svg);
     background-repeat: no-repeat;
     background-position: 100% 100%;
     
@@ -754,13 +730,8 @@ header {
     
     margin-top: clamp(3.5rem, 3.4120rem + 0.3756vw, 3.75rem);
     margin-bottom: clamp(3rem, 1.4155rem + 6.7606vw, 7.5rem);
-  
     z-index: 0;
-    
-   
     position: relative;
-    
-
     
     .container {
         display: flex;
@@ -768,14 +739,6 @@ header {
         gap: 60px;
         justify-content: space-between;
         
-        
-       
-        
-        
-        
-       
-        
-
         @media (min-width: 992px) {
             flex-flow: row;
             
@@ -787,8 +750,6 @@ header {
             gap:20px;
             z-index: 1;
             background-color: #fff;
-            
-        
             
         }
  
@@ -820,7 +781,6 @@ header {
 
             }
 
-
                 .icon-txt {
                     text-align: center;
 
@@ -839,33 +799,21 @@ header {
             }
         }   
 
-        
         .us-img {
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            
             z-index: 0;
 
-            
-
-            
-           
-    
             img {
                 max-width: 100%;
                 object-fit: cover;
                 padding-top: 20px;
 
-                
-              
-                
                @media (min-width: 992px) and (max-width: 1200px) {
                 position: sticky;
                 top: 10px;
                }
-        
-                
             }  
             
             @media (min-width: 992px) {
@@ -881,15 +829,9 @@ header {
                     width: 55%;
                     z-index: -1;
                     
-                   }
-
+                }
             }
-            
         }
-           
-
-        
-       
     }
 }
 
@@ -1047,8 +989,6 @@ header {
 
             }
         }    
-
-        
     }  
 }
 
@@ -1176,8 +1116,9 @@ header {
         .article-news-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
-            margin-top: clamp(2rem, 1.8571rem + 0.7143vw, 2.5rem);
+            column-gap: 30px;
+            row-gap: 60px;
+            margin-top: 2.5rem;
             margin-bottom: clamp(2rem, 1.5000rem + 2.5000vw, 3.75rem);
 
             @media (min-width: 768px) {
@@ -1204,7 +1145,8 @@ header {
                     align-items: center;
                     background-color: #F9D783;
                     width: 50px;
-                    height: 65px;
+                    padding-top: 1rem;
+                    padding-bottom: .5rem;
                     position: absolute;
                     top: 20px;
                     left: 20px;
@@ -1271,7 +1213,7 @@ header {
 .sign-up {
     padding: clamp(3rem, 2.0714rem + 4.6429vw, 6.25rem) 0;
     background-color: #F0EFE9;
-    background-image: url(/icons/bg-signup.svg);
+    background-image: url(/images/bg-effects/bg-signup.svg);
     background-repeat: no-repeat;
     background-position: 100% 100%;
 
@@ -1294,22 +1236,22 @@ header {
             text-align: center;
         }
 
-        input {
-            border-radius: 25px;
-            padding: 12px 30px;
-            border: 1px solid #fff;
-            
-        }
-
-        .button {
-            padding: 12px 30px;
-        }
-
         .sign-up-form {
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 20px;
+
+            input {
+                border-radius: 25px;
+                padding: 12px 30px;
+                border: 1px solid #fff;
+                
+            }
+    
+            .button {
+                padding: 12px 30px;
+            }
 
             @media (min-width: 768px) {
                 flex-direction: row;  
@@ -1320,7 +1262,7 @@ header {
        
 .footer {
     background-color: #0E1021;
-    background-image: url(/images/footer-bg-effect.png);
+    background-image: url(/images/bg-effects/bg-footer.svg);
     background-repeat: no-repeat;
     background-position: 100% 100%;
     padding-top: clamp(3rem, 1.8034rem + 5.9829vw, 7.188rem);
