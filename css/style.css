@@ -4,6 +4,7 @@ html, body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 .button {
@@ -64,13 +65,6 @@ h4 {
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
-}
-
-ul[role=list],
-ol[role=list] {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .pagination {
@@ -168,43 +162,13 @@ header .container .menu .main-menu {
   align-items: center;
   padding-top: 0.5rem;
 }
-header .container .menu .main-menu .mobile-nav-toggle {
-  z-index: 9999;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-header .container .menu .main-menu .mobile-nav-toggle::before, header .container .menu .main-menu .mobile-nav-toggle::after,
-header .container .menu .main-menu .mobile-nav-toggle > input {
-  content: "";
-  width: 24px;
-  height: 2px;
-  background-color: #191919;
-  border-radius: 2px;
-  transition: opacity 200ms ease-in-out, width 200ms ease-in-out, rotate 200ms ease-in-out, translate 200ms ease-in-out;
-  transform-origin: center center;
-}
-header .container .menu .main-menu .mobile-nav-toggle > input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  pointer-events: none;
-}
-header .container .menu .main-menu .mobile-nav-toggle > input:checked {
-  opacity: 0;
-  width: 0;
-}
-header .container .menu .main-menu .mobile-nav-toggle:has(input:checked)::before {
-  rotate: 45deg;
-  translate: 0px 8px;
-}
-header .container .menu .main-menu .mobile-nav-toggle:has(input:checked)::after {
-  rotate: -45deg;
-  translate: 0px -6px;
+header .container .menu .main-menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.75rem;
 }
 @media (min-width: 992px) {
-  header .container .menu .main-menu .mobile-nav-toggle {
+  header .container .menu .main-menu button {
     display: none;
   }
 }
@@ -216,20 +180,8 @@ header .container .menu .main-menu .primary-navigation {
 }
 @media (max-width: 992px) {
   header .container .menu .main-menu .primary-navigation {
-    position: fixed;
-    inset: 0 0 0 30%;
-    background-color: #dad9d3;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 40px;
-    padding-top: 7rem;
-    z-index: 1000;
-    transform: translateX(100%);
-    transition: transform 0.2s ease-out;
+    display: none;
   }
-}
-header .container .menu .main-menu .primary-navigation[data-visible=true] {
-  transform: translateX(0%);
 }
 header .container .menu .main-menu .primary-navigation ul {
   display: flex;
@@ -324,6 +276,7 @@ header .container .menu .main-menu .login-button a:hover {
   font-size: clamp(2.5rem, 1.5891rem + 4.5545vw, 5.375rem);
   text-transform: capitalize;
   font-family: "DM Sans", sans-serif;
+  text-wrap: balance;
 }
 .hero .hero-info p {
   font-size: clamp(1rem, 0.9366rem + 0.3168vw, 1.2rem);
@@ -1176,9 +1129,6 @@ header .container .menu .main-menu .login-button a:hover {
 }
 .footer .container .company nav ul li a:hover, .footer .container .help nav ul li a:hover, .footer .container .resources nav ul li a:hover, .footer .container .link nav ul li a:hover {
   text-decoration: underline;
-}
-.footer .container .footer-bottom {
-  display: flex;
 }
 
 .footer-bottom {
