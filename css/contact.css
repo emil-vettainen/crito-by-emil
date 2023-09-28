@@ -115,9 +115,13 @@
   padding: 12px 30px;
 }
 
-.google-maps img {
-  min-height: 400px;
+.google-maps {
+  display: block;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  min-height: 420px;
+}
+@media (min-width: 992px) {
+  .google-maps {
+    min-height: 620px;
+  }
 }

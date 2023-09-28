@@ -5,14 +5,8 @@ html, body{
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
+    overflow-x: hidden;
 }
-
-// body {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     min-height: 100vh;
-// }
 
 .button{
     padding: 10px 30px;
@@ -76,13 +70,6 @@ img, picture, video, canvas, svg {
     max-width: 100%;
   }
 
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .pagination {
     display: flex;
     justify-content: center;
@@ -127,19 +114,12 @@ header {
         gap: 4.375rem;
         
         .menu {
-            // display: none;
             flex-grow: 1;
-           
-            // @media (min-width:992px){
-            //     display: block;
-            // }
-
+        
             .top-menu{
-
                 display: none;
 
                 @media (min-width: 992px) {
-
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -203,48 +183,13 @@ header {
                 justify-content: flex-end;
                 align-items: center;
                 padding-top: .5rem;
-                
-                .mobile-nav-toggle {
-                    z-index: 9999;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-                    cursor: pointer;
+
+                button {
+
+                    background-color: transparent;
+                    border: none;
+                    font-size: 1.75rem;
                     
-                    &::before,
-                    &::after,
-                    >input {
-                        content: "";
-                        width: 24px;
-                        height: 2px;
-                        background-color: #191919;
-                        border-radius: 2px;
-                        transition: opacity 200ms ease-in-out, width 200ms ease-in-out, rotate 200ms ease-in-out, translate 200ms ease-in-out;
-                        transform-origin: center center;
-                    }
-
-                    >input {
-                        appearance: none;
-                        pointer-events: none;
-
-                        &:checked {
-                            opacity: 0;
-                            width: 0;
-                        }
-                    }
-
-                    &:has(input:checked)::before {
-                        rotate: 45deg;
-                        translate: 0px 8px;
-                        
-                    }
-                    
-                    &:has(input:checked)::after {
-                        rotate: -45deg;
-                        translate: 0px -6px;
-                        
-                    }
-
                     @media (min-width: 992px) {
                         display: none;
                     }
@@ -257,22 +202,7 @@ header {
                     flex: 1;
 
                     @media (max-width: 992px) {
-                        position: fixed;
-                        inset: 0 0 0 30%;
-                        background-color: #dad9d3;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        gap: 40px;
-                        padding-top: 7rem;
-                        z-index: 1000;
-                        
-                        transform: translateX(100%);
-                        transition: transform .2s ease-out;
-                    }
-
-                    &[data-visible="true"] {
-                        transform: translateX(0%);
-                        
+                        display: none;
                     }
 
                     ul {
@@ -380,6 +310,7 @@ header {
             font-size: clamp(2.5rem, 1.5891rem + 4.5545vw, 5.375rem);
             text-transform: capitalize;
             font-family: 'DM Sans', sans-serif;
+            text-wrap: balance;
         }
 
         p {
@@ -1333,16 +1264,10 @@ header {
                 }  
             }
         }
-        
-        .footer-bottom {
-            display: flex;
-
-        }
     }
 } 
 
 .footer-bottom {
-    
     padding-top: clamp(1rem, 0.7500rem + 1.2500vw, 1.875rem);
     padding-bottom: clamp(1rem, 0.7500rem + 1.2500vw, 1.875rem);
     background-color: #0E1021;
