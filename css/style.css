@@ -147,6 +147,12 @@ header .container .menu .top-menu .contact .contact-info a:hover i {
 header .container .menu .top-menu .contact .contact-info.last {
   border: none;
 }
+header .container .menu .top-menu .social-media ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 header .container .menu .top-menu .social-media a {
   color: #191919;
   font-size: 1.2rem;

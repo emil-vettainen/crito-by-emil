@@ -8,6 +8,8 @@ html, body{
     overflow-x: hidden;
 }
 
+
+
 .button{
     padding: 10px 30px;
     background-color: #F9D783;
@@ -162,6 +164,13 @@ header {
                 }
 
                 .social-media {
+
+                    ul {
+                        display: flex;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                    }
 
                     a {
                         color: #191919;
@@ -813,6 +822,7 @@ header {
                     h4 {
                         padding-bottom: 10px;
                     }
+                    
     
                     .blog-button {
                         border-top: 1px solid #dad9d3;
