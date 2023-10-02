@@ -4,7 +4,6 @@ html, body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  overflow-x: hidden;
 }
 
 .button {
@@ -512,7 +511,7 @@ header .container .menu .main-menu .login-button a:hover {
   margin-right: 10px;
   border: 1px solid #191919;
   border-radius: 50%;
-  padding: 14px;
+  padding: 16px;
 }
 .about-company .container .about-info .about-buttons .play:hover {
   transform: scale(0.9);

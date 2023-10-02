@@ -13,7 +13,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/contact.css">
-    <script defer src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
+    
 
 
 </head>
@@ -26,36 +26,46 @@
                 <div class="top-menu">
                     <div class="contact">
                         <div class="contact-info">
-                            <a href="#"><i class="fa-regular fa-phone-volume"></i>+46 (8) 121 470 50</a>
+                            <a href="#"><i class="fa-regular fa-phone-volume" aria-hidden="true"></i>+46 (8) 121 470
+                                50</a>
                         </div>
                         <div class="contact-info">
-                            <a href="#"><i class="fa-regular fa-envelope-dot"></i>info@crito.com</a>
+                            <a href="#"><i class="fa-regular fa-envelope-dot" aria-hidden="true"></i>info@crito.com</a>
                         </div>
                         <div class="contact-info last">
-                            <a href="#"><i class="fa-regular fa-location-dot"></i>Sveavägen 31, 111 34 STOCKHOLM</a>
+                            <a href="#"><i class="fa-regular fa-location-dot" aria-hidden="true"></i>Sveavägen 31, 111
+                                34 STOCKHOLM</a>
                         </div>
                     </div>
                     <div class="social-media">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+                        <ul>
+                            <li><a aria-label="Facebook" href="#"><i class="fa-brands fa-facebook" aria-hidden="true"
+                                title="Facebook"></i></a></li>
+                            <li><a aria-label="Twitter" href="#"><i class="fa-brands fa-twitter" aria-hidden="true"
+                                title="Twitter"></i></a></li>
+                            <li><a aria-label="Instagram" href="#"><i class="fa-brands fa-instagram" aria-hidden="true"
+                                title="Instagram"></i></a></li>
+                            <li><a aria-label="Linkedin" href="#"><i class="fa-brands fa-linkedin" aria-hidden="true"
+                                title="Linkedin"></i></a></li>
+                        </ul>
+    
                     </div>
                 </div>
                 <div class="main-menu">
-                    <button><i class="fa-light fa-bars-staggered"></i></button>
+                    <button aria-label="Toggle Menu"><i class="fa-light fa-bars-staggered" aria-hidden="true"></i></button>
                     <nav class="primary-navigation">
-                        <ul aria-label="primary-navigation">
+                        <ul>
                             <li><a class="underline" href="/index.html">Home</a></li>
                             <li><a class="underline" href="">Service</a></li>
                             <li><a class="underline" href="">News</a></li>
                             <li><a class="active underline" href="/contact.html">Contact</a></li>
                         </ul>
-                    
+
                         <div class="login-button">
-                            <a href="#">Login<i class="fa-regular fa-arrow-up-right"></i></a>
+                            <a href="#">Login<i class="fa-regular fa-arrow-up-right" aria-hidden="true"></i></a>
                         </div>
-                    
+
                     </nav>
                 </div>
             </div>
@@ -186,21 +196,23 @@
         <!-- Även här valde jag en div istället för section då innehållet saknar h2-h6 -->
         <div class="footer-bottom">
             <div class="container">
-
                 <p>&copy; 2023 Crito - Consulting Company Inc. All Rights Reserved.</p>
-                <!-- Provade att tillämpa aria-label, efter att läst lite om det för tillgänglighet -->
                 <ul aria-label="social links" class="social-links">
-                    <li><a aria-label="facebook" href=""><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a aria-label="twitter" href=""><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a aria-label="instagram" href=""><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a aria-label="linkedin" href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a aria-label="Facebook" href=""><i class="fa-brands fa-facebook" aria-hidden="true"
+                                title="Facebook"></i></a></li>
+                    <li><a aria-label="Twitter" href=""><i class="fa-brands fa-twitter" aria-hidden="true"
+                                title="Twitter"></i></a></li>
+                    <li><a aria-label="Instagram" href=""><i class="fa-brands fa-instagram" aria-hidden="true"
+                                title="Instagram"></i></a></li>
+                    <li><a aria-label="Linkedin" href=""><i class="fa-brands fa-linkedin" aria-hidden="true"
+                                title="Linkedin"></i></a></li>
                 </ul>
 
             </div>
         </div>
 
     </footer>
-
+    <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
